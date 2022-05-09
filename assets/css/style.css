@@ -1,0 +1,39 @@
+.contenedor-navbar{
+    position:absolute;
+    height: 100vh;
+    top: 0;
+    align-items: center;
+
+}
+
+.nav-vertical{
+    border-radius: 15px;
+    height: 90vh;
+    width: 5em;
+    justify-content: center;
+    
+
+}
+
+.navbar-iconos .nav-item{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    padding-right: 15px;
+}
+
+.form-buscar{
+    width:100%;
+    height: 65px;
+}
+
+.iconos-lc{
+    align-content: center;
+}
+.icono-carrito,
+.icono-login{
+
+    background-color:#000;
+    height:100px;
+    width:100px;
+}

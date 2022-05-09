@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-integrador-sooners",
+  "version": "1.0.0",
+  "description": "-Alejandro Andrade Rangel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Remoxjb/Proyecto-Integrador-Sooners.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Remoxjb/Proyecto-Integrador-Sooners/issues"
+  },
+  "homepage": "https://github.com/Remoxjb/Proyecto-Integrador-Sooners#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
