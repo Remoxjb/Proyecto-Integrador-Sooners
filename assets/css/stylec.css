@@ -1,0 +1,33 @@
+body{
+    background-color: #041C32;
+}
+.img-contactanos{
+    height: calc(100vh - 130px) ;
+    object-fit: cover;
+    object-position: center;
+}
+.pantalla{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 76px) ;
+    
+    display: flex; /* para afectar al hijo que es cuadro */
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+.cuadro{
+    font-family:  'Montserrat Alternates', sans-serif;
+    font-weight: 800; 
+    background-color: rgba(0, 0, 0, 0.110);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 50vw;
+}
+
+.imgForm{
+    width: 40px;
+    padding: 10px;
+}
