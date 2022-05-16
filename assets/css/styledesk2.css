@@ -1,9 +1,9 @@
 .container{
     display: flex;
+    width: auto;
     grid-template-columns: repeat(3, 1fr);
     min-height: 100vh;
     border-left-width: 100%;
-    /* max-width: 1300px !important; */ 
   }
 
 .fuente1{
@@ -19,25 +19,21 @@
 .right {
     background: linear-gradient(#04293a, rgba(48, 86, 143, 0.329));
     width: 50%;
-    display: flex;
-    grid-template-columns: 3,1fr; 
+    display: flex; 
     text-align: center;
     font-style: normal;
     justify-content: center;
 }
 
 .grid{
-    width: 240px;
-    height: 240px;
+
     display: auto;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
 }
 
 .card{
     background-color: #04293a85;
-    width: 250px;
     min-width:auto;
     margin-top: 5%;
     padding-left:1%;
@@ -52,14 +48,15 @@
 }
 
 .card-img-top{
-    width:auto;
-    margin-top: 2px;
+    margin-top: 5px;
     margin-left: 0px;
-    margin-right: 0px;
+    margin-right: 50px;
     display: flex;
 }
 
-.padre{
-    width: 70%;
-    height: 50%;
+.d-flex{
+    width: 92%;
+    height: 28%;
+    margin-left: 3%;
 }
+
