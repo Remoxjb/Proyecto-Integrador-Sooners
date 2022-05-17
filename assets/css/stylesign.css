@@ -1,0 +1,20 @@
+body{
+    background-color:white;
+}
+.inicio{
+    background-color: #ECB365;
+}
+.fin{
+    background-color: #041C32;
+}
+.fondoForm{
+    background-color: #041C32;
+}
+.espacio{
+    margin: 60px;
+}
+
+
+.imagen{
+    width: 25px;
+}
