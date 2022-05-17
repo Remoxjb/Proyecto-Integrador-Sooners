@@ -1,126 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Proyecto</title>
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/97b2540957.js" crossorigin="anonymous"></script>
-    
-    <!-- Link-bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    
-    <!-- Mis estilos -->
-    <link rel="stylesheet" href="assets/css/styleAle.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Proyecto</title>
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/97b2540957.js" crossorigin="anonymous"></script>
+
+  <!-- Link-bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+  <!-- Mis estilos -->
+  <link rel="stylesheet" href="assets/css/styleAle.css">
+  <link rel="stylesheet" href="assets/css/seccion_ayuda.css">
 </head>
+
 <body>
   <!-- !NAVBAR -->
   <div class="container-fluid contenedor-navbar">
-    
+
     <nav class="navbar navbar-dark  nav-vertical">
-      
-      
+
+
       <ul class="navbar-nav navbar-iconos">
         <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-house-chimney"></i></a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-store"></i></i></a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-people-group"></i></a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-circle-question"></i></a></li>        
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-circle-question"></i></a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-github"></i></a></li>
-        
-        
+
+
         <li class="nav-item"><a class="nav-link" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
 
       </ul>
     </nav>
   </div>
- 
-  <!-- Barra de busqueda -->
- <div class="container-fluid contenedor-busqueda">
-   <div class="row row-cols-auto">
 
-     <div class="col col-sm-9 col-lg-7 col-buscador mt-2">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control form-buscador" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2"></button>
+  <!-- Barra de busqueda -->
+  <div class="container-fluid contenedor-busqueda">
+    <div class="row row-cols-auto">
+
+      <div class="col col-sm-9 col-lg-7 col-buscador mt-2">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-buscador" placeholder="Buscar" aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+              class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
       </div>
-    </div>
-    
-     <div class="col-2 d-none d-sm-block col-usuario">
-       <div class="usuario">
-         
-        <i class="fa-solid fa-user"></i>
-        <h5 class="d-md-inline-block pt-2">Usuario </h5>
-       </div>
-     </div>
-     <div class="col-3 vertical-col">
-      
-     </div>
-     
+
+      <div class="col-2 d-none d-sm-block col-usuario pt-3">
+        <div class="usuario">
+
+          <i class="fa-solid fa-user">
+            <spam class="d-inline usuario">Usuario </spam>
+          </i>
+
+        </div>
+      </div>
+      <div class="col-3 vertical-col mt-3">
+        <div class="container-fluid p-2">
+
+        </div>
+        <div class="card card-vertical mb-3">
+          <img src="https://i.pinimg.com/564x/97/be/67/97be67443ad2b28a823c35f1ca6b1ccc.jpg" class="card-img-top"
+          alt="...">
+          <div class="card-body">
+            <h5 class="text-center titulo-h5 ">Mas reciente</h5>
+            <p class="news">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, sequi. Nobis dolorem nihil in, facere, et magnam labore voluptas necessitatibus dolore, suscipit obcaecati beatae consectetur recusandae. Asperiores sit reprehenderit perferendis similique architecto placeat Lorem ipsum dolor sit amet.</p>
+            <div class="card-price">
+              <button type="button" class="btn-card"></button>    
+              <button type="button" class="btn-cardP">
+                  <div class="card-price">
+                      <img src="https://i.pinimg.com/originals/15/bb/55/15bb559cdd28f56d7c17b00498b4a946.png" style="width: 25px; height: 25px; margin-bottom: 10px;"alt="">
+                  </div>
+                  
+              </button>
+          </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
     <!-- imagen portada-->
     <div class="row row-img">
+      <div class="container-fluid position-absolute pt-3 texto-portada">
+
+        <h3 class="titulo-h2 pb-1">PageSoon</h3>
+        <p class="texto">En PageSoon, podrás encontrar el estilo para tu pagina que quieres podrás encontrar diversidad
+          de opciones que mas se adecúen a tu estilo !</p>
+      </div>
+
       <div class="col g-0">
-        <img class="img-fluid" src="https://64.media.tumblr.com/fc16cc5184f1cbbde6ba202287a08251/tumblr_o9maudhqm61ual9cko1_1280.gifv" alt="">
+        <img class="img-fluid"
+          src="https://64.media.tumblr.com/fc16cc5184f1cbbde6ba202287a08251/tumblr_o9maudhqm61ual9cko1_1280.gifv"
+          alt="">
       </div>
     </div>
 
-    
-    
-     <!-- Devs -->
+
+
+    <!-- Devs -->
     <div class="container contenedor-devs">
       <div class="row row-cols-sm-6">
-        <div class="col col-fijo"><div class=" devs devs-activo"><img src="" alt=""></div></div>
-        <div class="col fijo"><div class="devs"></div></div>
-        <div class="col ocultar-m"><div class="devs"></div></div>
-        <div class="col ocultar"><div class="devs"></div></div>
-        <div class="col ocultar"><div class="devs"></div></div>
-        <div class="col ocultar"><div class="devs"></div></div>
+        <div class="col col-fijo">
+          <div class=" devs devs-activo"><img class="img-devs" src="" alt=""></div>
+        </div>
+        <div class="col fijo">
+          <div class="devs"></div>
+        </div>
+        <div class="col ocultar-m">
+          <div class="devs"></div>
+        </div>
+        <div class="col ocultar">
+          <div class="devs"></div>
+        </div>
+        <div class="col ocultar">
+          <div class="devs"></div>
+        </div>
+        <div class="col ocultar">
+          <div class="devs"></div>
+        </div>
       </div>
     </div>
 
 
-    <!-- Cartas -->
-    <div class="container contenedor-cartas">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4">
+  </div>
+  <!-- Cartas -->
+  <div class="container-lg contenedor-cartas">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4">
+      <div class="col">
+        <div class="card cartas-portada">
+          <img src="https://i.pinimg.com/564x/97/be/67/97be67443ad2b28a823c35f1ca6b1ccc.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <div class="card-price">
+              <button type="button" class="btn-card"></button>    
+              <button type="button" class="btn-cardP">
+                  <div class="card-price">
+                      <img src="https://i.pinimg.com/originals/15/bb/55/15bb559cdd28f56d7c17b00498b4a946.png" style="width: 25px; height: 25px; margin-bottom: 10px;"alt="">
+                  </div>
+                  
+              </button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-none d-sm-block">
+        <div class="card cartas-portada">
+          <img src="https://i.pinimg.com/564x/7c/13/6b/7c136b265e6554267a9ad096ca9c121c.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <div class="card-price">
+              <button type="button" class="btn-card"></button>    
+              <button type="button" class="btn-cardP">
+                  <div class="card-price">
+                      <img src="https://i.pinimg.com/originals/15/bb/55/15bb559cdd28f56d7c17b00498b4a946.png" style="width: 25px; height: 25px; margin-bottom: 10px;"alt="">
+                  </div>
+                  
+              </button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col d-none d-md-block">
+        <div class="card cartas-portada">
+          <img src="https://i.pinimg.com/564x/32/04/71/320471b9d96c2dd90588c4deeedd3711.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+
+            <div class="card-price">
+              <button type="button" class="btn-card"></button>    
+              <button type="button" class="btn-cardP">
+                  <div class="card-price">
+                      <img src="https://i.pinimg.com/originals/15/bb/55/15bb559cdd28f56d7c17b00498b4a946.png" style="width: 25px; height: 25px; margin-bottom: 10px;"alt="">
+                  </div>
+                  
+              </button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+    <!-- Sección 2 -->
+  <section>
+    <div class="container  mb-5 container-1 ">
+      <h2 class="titulo-h2">¿Tienes problemas?</h2>
+      <p>En esta sección podrás encontrar unas sugerencias para resolver y conocer algunas dudas que tengas</p>
+    </div>
+
+    <div class="container mb-5 container-2">
+      <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 ">
+        <div class="col pt-sm-5 mb-sm-5">
+          <i class=" icon fa-solid fa-person-circle-question"></i>
+          <p class="texto-ayuda">¿Tienes problemas para hacer el pago de tus productos? </p>
+
+        </div>
+        <div class="col pt-sm-5 mb-sm-5">
+          <i class=" icon fa-solid fa-cart-shopping"></i>
+          <p class="texto-ayuda">¿Tienes problemas para hacer el pago de tus productos?</p>
+        </div>
+        <div class="col pt-sm-5 mb-sm-5">
+          <i class=" icon fa-solid fa-handshake-angle"></i>
+          <p class="texto-ayuda">¿Quieres ser un creador de contenido o contribuir?</p>
+        </div>
+        <div class="col pt-sm-5 mb-sm-5">
+          <i class=" icon fa-solid fa-envelope-open-text"></i>
+          <p class="texto-ayuda">
+            ¿Quieres ser un creador de contenido o contribuir?
+          </p>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <footer class="container-3">
+      <div class="row row-cols-1 row-cols-md-3 p-3">
         <div class="col">
-          <div class="card">
-            <img src="https://i.pinimg.com/564x/97/be/67/97be67443ad2b28a823c35f1ca6b1ccc.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
+          <p class="text-center">Todos los derechos reservados, equipo Sooners</p>
         </div>
-        <div class="col d-none d-sm-block">
-          <div class="card">
-            <img src="https://i.pinimg.com/564x/7c/13/6b/7c136b265e6554267a9ad096ca9c121c.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"></p>
-            </div>
+        <div class="col">
+          <div class="row ">
+            <div class="col-12 text-center mb-1">PageSoners</div>
+            <div class="col text-center"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="col text-center"><i class="fa-brands fa-github"></i></div>
+            <div class="col text-center"><i class="fa-brands fa-pinterest"></i></div>
+            <div class="col text-center"><i class="fa-brands fa-facebook"></i></div>
           </div>
-        </div>
-        <div class="col d-none d-md-block">
-          <div class="card">
-            <img src="https://i.pinimg.com/564x/32/04/71/320471b9d96c2dd90588c4deeedd3711.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
 
-        
-        
+        </div>
+        <div class="col">
+          <p class="text-center">Generetion México 2022</p>
+        </div>
       </div>
-    </div>
+    </footer>
+  </section>
 
 
-  
 
-    <script src="assets/js/bootstrap.bundle.js"></script>
+
+  <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
