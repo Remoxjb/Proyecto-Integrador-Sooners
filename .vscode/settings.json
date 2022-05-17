@@ -1,3 +1,7 @@
 {
+ DanPrz
+    "editor.wordWrap": "on"
+
     "liveServer.settings.port": 5501
+ main
 }
