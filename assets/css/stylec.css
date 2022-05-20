@@ -1,5 +1,5 @@
 body{
-    background-color: #041C32;
+    background: linear-gradient(180deg, #322172 30%,#a251ba 100%);
 }
 .img-contactanos{
     height: calc(100vh - 130px) ;
