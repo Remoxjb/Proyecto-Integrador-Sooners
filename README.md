@@ -6,5 +6,5 @@
 
 -Juan Badillo Vazquez
 
--Eduardo Abisai Farfan Coronado
+-Eduardo Farfan Coronado
 
