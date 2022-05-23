@@ -259,7 +259,7 @@ body{
 
 @keyframes estrellas{
     0%{
-        top: 360vh;
+        top: 300vh;
         opacity: 1;
     }
     30%{
