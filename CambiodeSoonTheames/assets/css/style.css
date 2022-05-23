@@ -30,6 +30,9 @@ body{
 .navbar{
     z-index: 1;
     background-color: #00000033;
+    backdrop-filter: blur(10px);
+    
+    -webkit-backdrop-filter: blur(10px);
     border-radius: 0px 0px 30px 30px;
     padding: 10px;
     height: auto;
