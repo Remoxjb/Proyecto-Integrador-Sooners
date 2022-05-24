@@ -1,0 +1,110 @@
+
+
+.carta {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px rgba(73, 69, 52, 0.4);
+    margin: 40px;
+}
+
+.carta .content {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;  
+    text-align: center;  
+    padding: 35px;
+    background: #47338f;
+}
+
+.carta .content .img {
+    height: 50%;
+    margin-bottom: 20px;
+}
+
+.carta .content .img img {
+    border: 3px solid #47338f;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.carta .content span {
+    position: absolute;
+    width: 350px;
+    height: 220px;
+    background: linear-gradient(to right, #592c88, #732280);
+    transform: rotate(-0deg);
+    top: -50px;
+    left: -100px;
+}
+
+.carta .content h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0 0 5px ;
+    margin-bottom: 5px;
+}
+
+.carta .content h6 {
+    font-size: 13px;
+    color: #e055f2;
+}
+
+#contenedor-Portafolio .carta .content p {
+    font-size: 13px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.carta .links {
+    position: absolute;
+    z-index: 2;
+    width: 52px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #732280;
+    box-shadow: 2px 3px 5px #e286f5;
+    padding: 20px;
+    align-items: center;
+    right: 10px;
+    top: 0px;
+    transition: .5s;
+}
+
+.carta:hover .links {
+    right: -48px;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.carta .links a {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.carta .links a:nth-child(1):hover {
+    color: #0158ca;
+}
+
+.carta .links a:nth-child(2):hover {
+    color: #b51ce4;
+}
+
+.carta .links a:nth-child(3):hover {
+    color: #ff0000;
+}
+
+.carta .links a:nth-child(4):hover {
+    color: #FE0000;
+}

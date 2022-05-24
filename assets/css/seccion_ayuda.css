@@ -5,42 +5,64 @@ section{
     font-weight: bold;
 }
 .container-1{
-    margin-top:7vw;
+    padding-top:50px;
+}
+
+.container-1 p{
+    color: #fff;;
+    text-shadow: 0 0 5px;
 }
 .titulo-h2{
     font-weight: bold;
-    color:#ECB365;
+    color:#ffffff;
+    text-shadow: 0 0 10px;
 }
 
 
 .container-2{
     margin-top:100px;
     text-align:center;
+    color:white;
 }
 
+
 .icon{
-    color:#ECB365;
+    color:#d5aff0;
     font-size:5rem;
     
 }
 .icon:hover{
     cursor:pointer;
-    color:#f3ddbd;
+    color:#d5aff0;
     font-size: 6rem;
-    text-shadow: 0 0 10px #ffb753;
+    text-shadow: 0 0 5px #ffffff;
     transition: .5s;
     
 }
 
 
 .container-3{
+    padding: 25px;
     background-color:#b3b3b3;
     color:#000000;
-    position: relative;
-    top:155px;
+    position: absolute;
+    float: bottom;
+    
+    width: 100%;
     
     
 
+}
+.icon-activo{
+    
+    color:#ffffff;
+    font-size:5rem;
+}
+
+.texto-js{
+    border-radius: 15px;
+    padding: 15px;
+    background-color:#fff;
 }
 
 /* Posicionar pagina */
