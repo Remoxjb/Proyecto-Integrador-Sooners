@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400;1,500&family=Press+Start+2P&family=Radio+Canada:wght@400;600&display=swap');
+
+/*  font-family: 'Poppins', sans-serif;
+
+    font-family: 'Press Start 2P', cursive;
+
+    font-family: 'Radio Canada', sans-serif; */
+
+
+body{
+    background-color:#322172;
+}
+.titulo-h2{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:30px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow:  0 0 5px;
+    color:#fff;
+}
+
+.imagen-mostrar{
+    height:80vh;
+    overflow:auto;
+
+}
+
+tbody, td, tfoot, th, thead, tr{
+    border-bottom: none;
+    border-style: none;
+    font-family: 'Radio Canada', sans-serif;
+    
+}
+
+
+.table td{
+    text-shadow: 0 0 5px;
+    color:#ffffff;
+}
+.table .text-table{
+    font-weight:600;
+    color: #b55fd9;
+}
+
+caption{
+    color:#fff;
+    text-shadow: 0 0 10px;
+    border-bottom: 1px solid #db5ee9;
+}
+.link-table{
+    border-bottom: 1px solid #fff;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+.link-table:hover{
+    color: #db5ee9;
+    border-bottom: 1px solid #db5ee9;
+}
+.btn-card{
+    color: #fff;
+    
+    background-color: #54297f;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #f4abfe;
+    
+}
+.btn-card:hover{
+    color: #000;
+    
+    background-color: #ffffff;
+    transition:.5s;
+    box-shadow: 0 0 15px #fff;
+    
+}
+
+.btn-carrito{
+    color: #fff;
+    box-shadow: 0 0 10px #f4abfe;
+    
+    border: none;
+    background-color: #54297f;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+.btn-carrito:hover{
+    color: #000;
+    
+    background-color: #ffffff;
+    transition:.5s;
+    box-shadow: 0 0 15px #fff;
+}
+
+.btn-card{
+    color: #fff;
+    
+    background-color: #54297f;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #f4abfe;
+    
+}
+.btn-card:hover{
+    color: #000;
+    
+    background-color: #ffffff;
+    transition:.5s;
+    box-shadow: 0 0 15px #fff;
+    
+}
+
+.btn-carrito{
+    color: #fff;
+    box-shadow: 0 0 10px #f4abfe;
+    
+    border: none;
+    background-color: #54297f;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-carrito:hover{
+    color: #000;
+    
+    background-color: #ffffff;
+    transition:.5s;
+    box-shadow: 0 0 15px #fff;
+}
