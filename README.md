@@ -8,3 +8,4 @@
 
 -Eduardo Farfan Coronado
 
+-Daniel Pérez Gómez
