@@ -1,0 +1,19 @@
+body{
+    background-color: white;
+}
+#inicio{
+    display: block;
+}
+
+#registrarse{
+    display: none;
+}
+
+.espacio{
+    margin: 60px;
+}
+
+
+.imagen{
+    width: 25px;
+}
