@@ -61,7 +61,7 @@ body{
 }
 
 .icon-size{
-    color:#B4A5A5;
+    color:#ffffff;
     padding-left: 20px;
     font-size: calc(2em + 0.1vw);
     font-weight:600;
@@ -69,22 +69,20 @@ body{
 .icon-size:hover{
     color:#ca80ff;
     cursor: pointer;
-    position: absolute;
+    
     text-shadow: 0 0 20px;
     top:5px;
     transition:.5s;
     font-size: calc(2.2em + 0.1vw);
-    left:  8px;
+    left:  15px;
 }
-.icon-size2{
-    color:#82009c00;
-    padding-left: 20px;
-    
-    font-size: calc(1.8em + 0.1vw);
-    font-weight:600;
-    cursor: default;
+.btn-cuenta{
+    border: none;
+    background :none;
+    color:white;
+    text-shadow: 0 0 5px;
+    padding :5px;
 }
-
 
 .navbar .nav-link{
     font-family: 'Radio Canada', sans-serif;

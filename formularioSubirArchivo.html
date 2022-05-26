@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sube Tu Diseño</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/formularioSubirArchivo.css">
+</head>
+<body>
+    
+
+    <div class="contenedor-formulario">
+        <form action="">
+            <h2 class="text-center form-titulo">Introduce datos para tu diseño</h2>
+            <div class="row row-cols-1 row-cols-sm-2">
+                <div class="col">
+
+                    <label for="NombreDiseño" class="text-label">Nombre de diseño:</label>
+                    
+                    <input type="text" id="NombreDiseño" placeholder="¿Cual es el nombre del diseño?">
+                </div>
+                
+                <div class="col">
+
+                    <label for="Orientación" class="text-label">Orientación:</label>
+               
+                    <input type="text" id="Orientación" placeholder="ejm: E-commerce">
+                </div>
+                <div class="col">
+
+                    <label for="Secciones" class="text-label-Sec">Secciones:</label>
+                
+                    <input type="number" id="Secciones" min="0" max="10" placeholder="¿Cuantas secciones tiene?">
+                </div>
+                <div class="col">
+
+                    <label for="Formularios" class="text-label-form">Formularios:</label>
+                
+                    <input type="" id="Formularios" placeholder="¿Con que tipo de formularios cuenta?">
+                </div>
+                <div class="col">
+
+                    <label for="Cuenta" class="text-label-cuenta">Cuenta: </label>
+                
+                 
+                    <input type="text" placeholder="Cuenta"> 
+                </div>
+                
+                <div class="col">
+                        <label for="Tienda" class="text-label">Tienda:</label>
+                    
+                        <input type="checkbox" name="no" id="Tienda" class="checkbox">
+                        
+
+                    <label for="Galeria" class="text-label">Galeria:</label>
+               
+                    <input type="checkbox" name="no" id="Galeria" class="checkbox">
+                </div>
+                <div class="col-12">
+
+
+                    <label for="Description" >Descripciones</label>
+                    <textarea class="textarea" name="" id="Description" cols="" rows=""></textarea>
+                </div>
+                <div class="col-12">
+
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn-formulario" id="btn-formulario-submit">Agregar</button>
+
+                </div>
+            </div>
+            
+        </form>
+    </div>
+
+
+
+</body>
+</html>
