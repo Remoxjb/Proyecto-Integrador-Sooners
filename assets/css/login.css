@@ -1,6 +1,13 @@
+
 body{
-    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#322172, white);
 }
+
+
 #inicio{
     display: block;
 }
@@ -10,7 +17,7 @@ body{
 }
 
 .espacio{
-    margin: 60px;
+    border-radius: 25px;
 }
 
 
