@@ -1,9 +1,9 @@
 const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password: /^.{4,12}$/,
+    password: /^.{4,15}$/,
     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
     apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-    usuario: /^[a-zA-ZÀ-ÿ0-9.\s.^]{5,20}$/,
+    usuario: /^.{4,12}$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     contrasenia: /^.{4,12}$/,
     repetir: /^.{4,12}$/,
@@ -33,10 +33,14 @@ const emailError = document.querySelector('#errorEmail');
 const contraseniaError = document.querySelector('#errorContrasenia');
 const repetirError = document.querySelector('#errorRepetir')
 
-// valida tenga informacion
+
+// valida tenga informacion iniciar sesión
 const estatusInf = {
 	correo: false,
-	password: false,
+	password: false,    
+}
+
+const estatusInf2 ={
     nombre: false,
 	apellido: false,
     usuario: false,
@@ -44,7 +48,7 @@ const estatusInf = {
     contrasenia: false,
 	repetir: false,
 }
-
+//inicio sesion
 inputs.forEach((inp)=>{
     //console.log(inp);
 
@@ -76,77 +80,96 @@ inputs.forEach((inp)=>{
                     passwordError.textContent = "Password no valido"
                 }
                 break
-
-            case "nombre":
-                if(expresiones.nombre.test(e.target.value)){
-                    estatusInf.nombre = true
-                    nombreError.textContent = ""
-                }
-                else{
-                    estatusInf.nombre = false
-                    nombreError.textContent = "Nombre no valido"
-                }
-                break
-                case "apellido":
-                    if(expresiones.apellido.test(e.target.value)){
-                        estatusInf.apellido = true
-                        apellidoError.textContent = ""
-                    }
-                    else{
-                        estatusInf.apellido = false
-                        apellidoError.textContent = "Apellido no valido"
-                    }
-                    break
-                case "usuario":
-                    if(expresiones.usuario.test(e.target.value)){
-                        estatusInf.usuario = true
-                        usuarioError.textContent = ""
-                    }
-                    else{
-                        estatusInf.usuario = false
-                        usuarioError.textContent = "Usuario no valido"
-                    }
-                    break
-                case "email":
-                    if(expresiones.email.test(e.target.value)){
-                        estatusInf.email = true
-                        emailError.textContent = ""
-                    }
-                    else{
-                        estatusInf.email = false
-                        emailError.textContent = "Email no valido"
-                    }
-                    break
-                 case "contrasenia":
-                     if(expresiones.contrasenia.test(e.target.value)){
-                        estatusInf.contrasenia = true
-                        contraseniaError.textContent = ""
-                    }
-                    else{
-                        estatusInf.contrasenia = false
-                         contraseniaError.textContent = "Contraseña no valida"
-                        }
-                        break
-                 case "contrasenia":
-                        if(expresiones.contrasenia.test(e.target.value)){
-                          estatusInf.contrasenia = true
-                          contraseniaError.textContent = ""
-                        }
-                        else{
-                            estatusInf.contrasenia = false
-                            contraseniaError.textContent = "Contraseña no valida"
-                        }
-                        break
-
         }
     })
 }) 
 
+
+//inicio sesion
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     //console.log(formulario);
 
    if(!Object.values(estatusInf).includes(false)){
+       //console.log("Enviado");
+        const datos = Object.fromEntries(
+            new FormData(e.target)
+        )
+        console.log(datos);
+        formulario.reset()
+    }
+})
+
+
+//registro
+inputs.forEach((inp)=>{
+    //console.log(inp);
+
+    
+    inp.addEventListener("keyup", (e)=>{
+         //console.log(e.target.name);
+
+        switch(e.target.name){
+            case "nombre":
+                if(expresiones.nombre.test(e.target.value)){
+                    estatusInf2.nombre = true
+                    nombreError.textContent = ""
+                }
+                else{
+                    estatusInf2.nombre = false
+                    nombreError.textContent = "Nombre no valido"
+                }
+                break
+                case "apellido":
+                    if(expresiones.apellido.test(e.target.value)){
+                        estatusInf2.apellido = true
+                        apellidoError.textContent = ""
+                    }
+                    else{
+                        estatusInf2.apellido = false
+                        apellidoError.textContent = "Apellido no valido"
+                    }
+                    break
+                case "usuario":
+                    if(expresiones.usuario.test(e.target.value)){
+                        estatusInf2.usuario = true
+                        usuarioError.textContent = ""
+                    }
+                    else{
+                        estatusInf2.usuario = false
+                        usuarioError.textContent = "Usuario no valido"
+                    }
+                    break
+                case "email":
+                    if(expresiones.email.test(e.target.value)){
+                        estatusInf2.email = true
+                        emailError.textContent = ""
+                    }
+                    else{
+                        estatusInf2.email = false
+                        emailError.textContent = "Email no valido"
+                    }
+                    break
+                 case "contrasenia":
+                     if(expresiones.contrasenia.test(e.target.value)){
+                        estatusInf2.contrasenia = true
+                        contraseniaError.textContent = ""
+                    }
+                    else{
+                        estatusInf2.contrasenia = false
+                         contraseniaError.textContent = "Contraseña no valida"
+                        }
+                        break
+        }
+    })
+})
+
+//registro
+formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+    //console.log(formulario);
+
+   if(!Object.values(estatusInf2).includes(false)){
        //console.log("Enviado");
         const datos = Object.fromEntries(
             new FormData(e.target)
