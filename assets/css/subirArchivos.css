@@ -1,19 +1,20 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
-}
+} */
 
-body{
+/* body{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(#322172, white);
-}
+} */
 
 .drop-area{
+    margin: 0 auto;
     border: 5px dashed rgb(255, 255, 255);
     height: 500px;
     width: 700px;

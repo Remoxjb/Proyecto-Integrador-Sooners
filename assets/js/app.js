@@ -8,7 +8,6 @@ const $nosotros = document.querySelectorAll(".nosotros");
 
 
 
-
 const ptf_1 = `
 <div class="row contenedor-js-app-1" id="contenedor-js-1">
     
@@ -196,7 +195,9 @@ function mostrarPantalla(t) {
 
 }
 
-
+function scrollClick(){
+  window.scroll(0, 500)
+}
 
 
 for (let i = 0; i < $linksNosotros.length; i++) {
@@ -208,7 +209,7 @@ for (let i = 0; i < $linksNosotros.length; i++) {
   
   link.addEventListener("click", (e) => {
     e.preventDefault();
-    
+    scrollClick();
     $contenedorNosotros.style.opacity = 1;
     switch (link.id) {
       case "ptf_1":
@@ -255,207 +256,3 @@ for (let i = 0; i < $linksNosotros.length; i++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* const $linkNosotros1 = document.getElementById("ptf-1");
-const $linkNosotros2 = document.getElementById("ptf-2");
-const $linkNosotros3 = document.getElementById("ptf-3");
-const $linkNosotros4 = document.getElementById("ptf-4");
-
-
-
-
-let mostrar = 0;
-$linkNosotros1.addEventListener("click", (e)=>{
-    e.preventDefault();
-    if (mostrar == 0) {
-    const $contenedor = document.getElementById("contenedor-Portafolio");
-    const template1 = `
-    <div class="row contenedor-js-app">
-    
-          <div   div class="col-12 ">
-              <h2>¿Que hacemos en SoonThemes?</h2>
-      
-          </div>
-          <div class="col-12 col-sm-6 text-center mt-4"><img class="img-fluid" width="800px" src="assets/img/undraw_innovative_re_rr5i.svg" alt="">
-          </div>
-              <div class="col-12 col-sm-6">
-              <p class="textoNosotros">Es SoonThemes creamos diseños funcionales para que inicies tu pagina web, en la tienda podrás encontrar una variedad de diseños y estilos, y comprarlos fácilmente, asi mismo podrás ponerte en contacto para un diseño exclusivo para tu negocio  </p>  
-      
-          </div>
-      </div>
-    `
-        $contenedor.innerHTML = template1
-
-        $contenedor.style.opacity = 1;
-        
-
-        mostrar = 1;
-        console.log(mostrar);
-        
-    } else {
-        const $contenedor = document.getElementById("contenedor-Portafolio");
-        $contenedor.style.opacity = 0;
-        $contenedor.innerHTML = ""
-        mostrar = 0;
-    }
-    console.log(mostrar);
-})
-
-
-$linkNosotros2.addEventListener("click", (e)=>{
-    e.preventDefault();
-    if (mostrar == 0) {
-    const $contenedor = document.getElementById("contenedor-Portafolio");
-    const template1 = `
-    <h3>Equipo de desarrollo</h3>
-        <div class="container d-flex contenedor-js-app">
-
-          <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
-            <div class="col">
-              <div class="card">
-                <img src="https://i.blogs.es/195f61/linus1/1366_2000.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center text-white">Juan Badillo</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="https://i.blogs.es/195f61/linus1/1366_2000.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center text-white">Daniel Pérez</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="https://i.blogs.es/195f61/linus1/1366_2000.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-center text-white">Eddu Farfan</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="https://i.blogs.es/195f61/linus1/1366_2000.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center text-white">Marco Aurelio</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="https://i.blogs.es/195f61/linus1/1366_2000.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center text-white">Alex Tovar</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="https://i.blogs.es/195f61/linus1/1366_2000.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center text-white">Alejandro Andrade</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-
-    `
-        $contenedor.innerHTML = template1
-        mostrar = 1;
-        console.log(mostrar);
-        
-    } else {
-        const $contenedor = document.getElementById("contenedor-Portafolio");
-        $contenedor.innerHTML = ""
-        mostrar = 0;
-    }
-    console.log(mostrar);
-
-})
-
-$linkNosotros3.addEventListener("click", (e)=>{
-  e.preventDefault();
-    if (mostrar == 0) {
-    const $contenedor = document.getElementById("contenedor-Portafolio");
-    const template3 = `
-        <div class="row " id="contenedor-js">
-          <div class="col-12">
-            <h2>Nuestra Tienda</h2>
-          </div>
-          <div class="col-12 col-md-6">
-            <img class="img-fluid" width="600px" src="assets/img/tienda.png" alt="" srcset="">
-            <a href="tienda.html"><button class="btn-tienda">Entrar</button></a> 
-          </div>
-          <div class="col">
-            <div class="row">
-              <div class="col-12"><p class="texto-tienda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur temporibus libero, asperiores, id facere iure consequuntur dicta, animi quaerat earum eaque omnis perspiciatis cum ea sed officiis aliquam soluta consectetur.</p></div>
-              <div class="col"><img width="350px" class="img-fluid"  src="assets/img/undraw_add_information_j2wg.svg" alt="" srcset=""></div>
-            </div>
-            
-          </div>
-          
-        </div>
-    `
-    $contenedor.innerHTML = template3
-    mostrar = 1;
-    console.log(mostrar);
-    
-  } else {
-    const $contenedor = document.getElementById("contenedor-Portafolio");
-    $contenedor.innerHTML = ""
-    mostrar = 0;
-  }
-  console.log(mostrar);
-
-})
-
-
-
-$linkNosotros4.addEventListener("click", (e)=>{
-
-}) */

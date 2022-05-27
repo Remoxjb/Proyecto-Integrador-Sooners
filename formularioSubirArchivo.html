@@ -7,6 +7,8 @@
     <title>Sube Tu Diseño</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/formularioSubirArchivo.css">
+    <link rel="stylesheet" href="assets/css/subirArchivos.css">
+    
 </head>
 <body>
     
@@ -74,6 +76,19 @@
             </div>
             
         </form>
+
+
+        <div>
+            <div class="drop-area">
+                <h2>Arrastra y suelta imágenes</h2>
+                <span>O</span>
+                <button>Selecciona tus archivos</button>
+                <input type="file" name="" id="input-file" hidden multiple/>
+            </div>
+            <div id="preview"></div>
+        </div>
+        
+            <script src="assets/js/importar.js"></script>
     </div>
 
 
