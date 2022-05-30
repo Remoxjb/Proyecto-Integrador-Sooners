@@ -196,7 +196,7 @@ function mostrarPantalla(t) {
 }
 
 function scrollClick(){
-  window.scroll(0, 500)
+  window.scroll(0, 1600)
 }
 
 

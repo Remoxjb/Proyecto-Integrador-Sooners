@@ -624,6 +624,9 @@ body{
     opacity: 0;
     transition: all 3s;
 }
+#ayuda{
+    padding-top: 100px;
+}
 
 .container-3{
     padding: 25px;
