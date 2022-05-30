@@ -88,6 +88,23 @@
                                 <a class="nav-link aria-current" href="seccionesTienda/blogs.html">Blogs</a>
                             </li>
                         </ul>
+                        <div class="profile-container">
+                            <div class="action">
+                              <div class="profile" onclick="menuToggle();">
+                                      <img src="https://images.pexels.com/photos/3134555/pexels-photo-3134555.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                              </div>                 
+                              <div class="menu">
+                                  <h3>Someone<br><span>Website Designer</span></h3>
+                                  <ul>
+                                      <li><img src="https://cdn-icons-png.flaticon.com/512/618/618631.png"><a href="#">My profile</a></li>      
+                                      <li><img src="https://as2.ftcdn.net/v2/jpg/01/07/62/07/1000_F_107620769_UwNVSoXnKS4VNcOKoZjPohlEPn83oE38.jpg"><a href="#">Subir diseño</a></li>
+                                      <li><img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png"><a href="#">Canasta</a></li>
+                                      <li><img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png"><a href="#">Log Out</a></li>
+                                  </ul>
+                              </div>
+                             </div>
+                          </div>
+          
                     </div>
                 </div>
             </div>
@@ -391,6 +408,12 @@
     <script src="assets/js/scrollrevealTienda.js"></script>
 
     <script src="assets/js/bootstrap.js"></script>
+    <script>
+        function menuToggle(){
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('activate')
+        } 
+      </script>
 </body>
 
 </html>
