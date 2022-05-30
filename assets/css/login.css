@@ -4,7 +4,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(#322172, white);
+    background: #322172;
 }
 
 
@@ -17,11 +17,15 @@ body{
 }
 
 .espacio{
-    background-color: #322172;
+    background-color: #5843a3;
     border-radius: 25px;
 }
 
 
 .imagen{
     width: 25px;
+}
+
+.row{
+    margin-left: 0;
 }

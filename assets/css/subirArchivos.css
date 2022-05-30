@@ -16,8 +16,8 @@
 .drop-area{
     margin: 0 auto;
     border: 5px dashed rgb(255, 255, 255);
-    height: 500px;
-    width: 700px;
+    height: 40vh;
+    width: 50vw;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
 }
 
 .drop-area h2{
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #000;
 }
@@ -47,7 +47,7 @@
      font-size: 20px;
      border: 0;
      outline: none;
-     background-color: #5256ad;
+     background-color: #947de6;
      color: white;
      border-radius: 5px;
      cursor: pointer;
