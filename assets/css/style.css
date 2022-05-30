@@ -599,3 +599,11 @@ body {
     float: bottom;
     width: 100%;
 }
+
+footer a {
+    color: #000000;
+}
+
+footer a:hover {
+    color: #8e74f0;
+}
