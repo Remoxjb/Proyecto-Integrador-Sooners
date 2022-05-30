@@ -179,80 +179,110 @@ const ptf_3 = `
         </div>
 
 `
+const ptf_4 = `
+        <div class="row contenedor-js-app-4" id="contenedor-js-4">
 
+            <div div class="col-12 ">
+                <h2>¿Que hacemos en SoonThemes?</h2>
+
+            </div>
+
+            <div class="col-12 col-sm-6 text-center mt-4">
+                <img class="img-fluid" width="800px" src="assets/img/login.png" alt="">
+                <a type="button" href="login.html" class="btn-portada text-center">
+                    <span id="span1"></span>
+                    <span id="span2"></span>
+                    <span id="span3"></span>
+                    <span id="span4"></span> Inicia sesión
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6">
+                <p class="textoNosotros">Podras Iniciar sessión o regístrarte en es SoonThemes, para tener acceso a las utilidades importantes de la tienda, compra y vende tus diseños en SoonThemes a hora.
+            </div>
+        </div>
+
+
+`
 
 
 
 function mostrarPantalla(t) {
 
-  
 
-  template = t
-  
-  $contenedorNosotros.innerHTML = template;
-  
-  
+
+    template = t
+
+    $contenedorNosotros.innerHTML = template;
+
+
 
 }
 
-function scrollClick(){
-  window.scroll(0, 1600)
+function scrollClick() {
+    window.scroll(0, 1600)
 }
 
 
 for (let i = 0; i < $linksNosotros.length; i++) {
 
-  const link = $linksNosotros[i];
-  
-  
-  
-  
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    scrollClick();
-    $contenedorNosotros.style.opacity = 1;
-    switch (link.id) {
-      case "ptf_1":
-        
-        mostrarPantalla(ptf_1);
-        const $contenedorJs1 = document.querySelector(".contenedor-js-app-1");
-        setTimeout(function () {
-          $contenedorJs1.style.opacity = "1";
-          
-        }, 500); 
-
-        break;
-      case "ptf_2":
-        mostrarPantalla(ptf_2);
-        const $contenedorJs2 = document.querySelector(".contenedor-js-app-2");
-        setTimeout(function () {
-          $contenedorJs2.style.opacity = "1";
-          
-        }, 500);   
+    const link = $linksNosotros[i];
 
 
-        break;
-      case "ptf_3":
 
-      mostrarPantalla(ptf_3)
-        const $contenedorJs3 = document.querySelector(".contenedor-js-app-3");
-        setTimeout(function () {
-          $contenedorJs3.style.opacity = "1";
-          
-        }, 500);   
 
-        break;
-    
-      
-    }
-    
-  })
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        scrollClick();
+        $contenedorNosotros.style.opacity = 1;
+        switch (link.id) {
+            case "ptf_1":
 
-  
-  
-  
+                mostrarPantalla(ptf_1);
+                const $contenedorJs1 = document.querySelector(".contenedor-js-app-1");
+                setTimeout(function() {
+                    $contenedorJs1.style.opacity = "1";
+
+                }, 500);
+
+                break;
+            case "ptf_2":
+                mostrarPantalla(ptf_2);
+                const $contenedorJs2 = document.querySelector(".contenedor-js-app-2");
+                setTimeout(function() {
+                    $contenedorJs2.style.opacity = "1";
+
+                }, 500);
+
+
+                break;
+            case "ptf_3":
+
+                mostrarPantalla(ptf_3)
+                const $contenedorJs3 = document.querySelector(".contenedor-js-app-3");
+                setTimeout(function() {
+                    $contenedorJs3.style.opacity = "1";
+
+                }, 500);
+
+                break;
+
+            case "ptf_4":
+
+                mostrarPantalla(ptf_4)
+                const $contenedorJs4 = document.querySelector(".contenedor-js-app-4");
+                setTimeout(function() {
+                    $contenedorJs4.style.opacity = "1";
+                }, 500);
+
+                break;
+
+
+        }
+
+    })
+
+
+
+
 }
-
-
-
-
