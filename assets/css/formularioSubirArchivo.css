@@ -31,6 +31,11 @@
     
 }
 
+.contenedor-formulario .checkbox{
+    
+    width: auto ;
+}
+
 .form-titulo{
     color: white;
     text-shadow: 0 0 10px;
@@ -46,3 +51,17 @@
     transition: all .5s;
     box-shadow: 0 0 15px #b55fd9;
 }
+
+.container-3{
+    padding: 25px;
+    background-color:#b3b3b3;
+    color:#000000;
+    position: absolute;
+    float: bottom;
+    
+    width: 100%;
+    
+    
+
+}
+
