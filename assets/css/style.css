@@ -598,4 +598,12 @@ body {
     position: absolute;
     float: bottom;
     width: 100%;
+
+}
+
+
+
+footer a:hover {
+    color: #8e74f0;
+
 }
