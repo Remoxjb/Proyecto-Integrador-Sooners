@@ -1,160 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Proyecto</title>
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/97b2540957.js" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://kit.fontawesome.com/97b2540957.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Link-bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+
     <!-- Mis estilos -->
-    <link rel="stylesheet" href="assets/css/login.css">
-</head>
-<body>
-  <!-- LOGIN USUARIOS -->
-  
-  <div class="container w-75">
-        <div class=" row espacio">
-            <div class="row">
-              <div class="col-sm-6">
-                <button id="iniciarSesion" class="btn btn-outline-success w-100 my-3" onclick="mostrarSesion()">
+    <link rel="stylesheet" href="assets/css/login.css" />
+  </head>
+  <body>
+    <!-- LOGIN USUARIOS -->
+
+    <div class="container w-75 centar">
+      <div class="row espacio">
+        <div class="row"> 
+          <div class="col-sm-6">
+            <button
+              id="iniciarSesion"
+              class="btn btn-outline-success w-100 my-3"
+              onclick="mostrarSesion()"
+            >
+              Iniciar Sesión
+            </button>
+          </div>
+          <div class="col-sm-6">
+            <button
+              id="registro"
+              class="btn btn-outline-danger w-100 my-3"
+              onclick="mostrarRegistro()"
+            >
+              Registrarse
+            </button>
+          </div>
+        </div>
+        <!-- Contenido de los Formularios -->
+        <form id="fomr1" class="row">
+          <div class="container">
+            <div id="inicio" class="row">
+              <h1 class="text-light text-center">Iniciar Sesión</h1>
+              <label for="correo" class="col-sm-2 col-form-label text-light"
+                >Email<span style="color: red">*</span></label
+              >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control text-center"
+                  id="correo"
+                  name="correo"
+                  placeholder="Ingresa correo"
+                />
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><img
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAeFBMVEUAAAD////8/PwNDQ0HBwcUFBT5+fnk5OQQEBB6enqVlZXJycnu7u6QkJDMzMwzMzOrq6tcXFwnJyfz8/MiIiJKSkptbW3U1NQZGRk1NTV2dnZCQkLg4OCysrItLS2bm5uCgoI9PT29vb1WVlalpaVQUFBkZGSIiIhAedyCAAAE3ElEQVR4nL2b2ZaySgyFi7mZFAXBuXFoff83/JvT66hAFZmAfa/5lBqSnaAsppIs3a8Oa8dZH1b7NEu436NYnzqmB1e1dUiPcwEE9VJpda6DGQDy2tGHb+SE+cQAfuSZwzfyUn9KgNN6OHyjIpsOIITDN9rb0wDkP7j4Sv0QVgIe4HjGxv/dD/gtiQaIgdXXlhePDVB9UeIr9VWNC5Agln9ba+ThjAOwN9T4v2czbi/gAPb0+EqV4wHcOfGV+h4LICdtgLe+MMsAA4A8APvajwMQdK9+tFzEeYQAeHDjK7UaA6Dix1dqMQLASgJwkwP4xDO4LRdMT0CAqyS+UicxQCkDeIgBtjIAD7oRIICFLL5SUGIAAdRSgFAIINqEjaCNCAEcpAAXIQAhE9WrEAKIjqFGrgwgl8ZXCkgKAICjHABIjwEA0VX4J+AgAAASOQCQlECLkJ0NvQTchxBAIY3vAQEggJ0UYCkEQJfkJm2EAMJ0AE4IIABmUfQWVB5BAIl0G0DVEZgRCa/DC/T9IEAkA0jFAIEMACzO4MLE4MvidAa/Hgb4lgCATwABYJPtobcK2LdFVMcZH+AOfzvGoLhw40P3ABYg5gJcRwLg3kjQPYQHSFhZQYGyKnE+YTXQJTHJwZm1SKv2RAcAnQESgPWkxn8ivxht1xOrVIQ/RgSg2ZVQUc4BsDJ0buIiTkAGgLVA2jVbdLuECGAFqEN5R+qfEhuXGXgkFYS/nwFg+emgd09unDKa13loPBYZrWNW+96/lprluH2cqL+eC9AoDncfENtdSFn5YwA0soP4FEWnOKD0iscEGEVIADun/kof+QEEgB0/N78L/3xHM9jZxVXO5hkjPgEA+H/B/7RELrTFq5ZpICQWTVJ3fMoSsc/zjqXwVQ+mZgMASdi3SbfgfEbWPyIGEYwAyV5/4J2jgX8hj/TeshMaEQwAyd58+TulId2sSnPuakTQA1yBm/9c3jt3bnAvAWO90PcQtQApJvcpbmUdZddrFtXlDVM4uFq7SAOQi7skJj00W7IPQJmWoWrXN0x6ACdxi2JIXq9e7QKIfUFI3YOkAxDL3XFA7mIIIBD2STHaBmYAX+SIYbXMjQC3OeJ3epmfAPU88duV4weAwA2j6q4DSCY9ANpyEg0Aa1yLq7IPcJz8BPjUe8LoBTDZDaTXrQsgnpSgatEBEM8JUHVoAwjbEhwFLQC2HcxX1QKwZzwE/rRpPwJZX4Qht+oAWIyxVYlevZwXQDDrQ7jYPYBZH4LzTk4/bsMZH0Jk6QAC5vAsXQdLC2DFjLYER+fEAGCdZrkR21lpOyueYyF25u47dUE9eXy3Uxt1KyPBEDFOQGXEGuSnqNfN7hWnuXhwZ0j9kf9+eZ6wW8Wc+DqDwp+sQNJNE+gsGnuaDN3VWnx6kyqdIL7hzR+DTTf+mbg2jLOYjErae02wLian0uyUjlmpuE+jbz7gFV/Fs4T/azMwTTTklvvhKCvBG+wkDvcLqhEOpcfwIAXUMfkW5qpraJAFniV7CJ6DV8tf8fjdD0+mebe7IzqZqK6ZndGLZ3eF6zChX3h8kDLW7RP7Lji+cZmkO+RqcDYZvstI6pzm1/ACQHg/6YLU4yS3bludxM7/voqwb5oKABrZ1X+NmtVhuXWdYrdZ7Z/fp5j39v0/EKtEXaMwWDIAAAAASUVORK5CYII="
+                      class="imagen"
+                      alt=""
+                  /></span>
+                </div>
+              </div>
+              <p class="msj-error text-light" id="errorCorreo"></p>
+              <label for="password" class="col-sm-2 col-form-label text-light"
+                >Password<span style="color: red">*</span></label
+              >
+              <div class="input-group">
+                <input
+                  type="password"
+                  class="form-control text-center"
+                  id="password"
+                  name="password"
+                  placeholder="Ingresa contraseña"
+                />
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><img
+                      src="data:image/png;base64,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"
+                      class="imagen"
+                      alt=""
+                  /></span>
+                </div>
+              </div>
+              <p class="msj-error text-light" id="errorPassword"></p>
+
+              <div class="d-grid gap-2 col-12 mx-auto">
+                <button type="submit" class="mt-3 btn btn-success pr-5 pl-5">
                   Iniciar Sesión
                 </button>
               </div>
-              <div class="col-sm-6">
-                <button id="registro" class="btn btn-outline-danger w-100 my-3" onclick="mostrarRegistro()">
-                  Registrarse
-                </button>
+              <div class="Forget">
+                <p class="text-light mt-3 text-center">
+                  <a href="" class="fw-bold" style="color: red"
+                    >Olvidaste tu contraseña?</a
+                  >
+                </p>
               </div>
             </div>
-            <!-- Contenido de los Formularios -->
-            <form id="fomr1" class="row align-items-center">
-              <div class="container">
-              <div id="inicio" class="row">  
-                <div class="form-group row">
-                    <h1 class="text-light text-center">Iniciar Sesión</h1>
-                  <label for="correo" class="col-sm-2 col-form-label text-light">Email<span style="color: red;">*</span></label>
+            <!-- Registrarse -->
+
+            <div id="registrarse" class="div">
+              <h1 class="text-light text-center">Registrarse</h1>
+              <div class="row">
+                <div class="col text-light">
+                  <label for="nombre" class="col-sm-2 col-form-label text-light"
+                    >Nombre<span style="color: red">*</span></label
+                  >
                   <div class="input-group">
-                    <input type="text" class="form-control text-center "  id="correo" name="correo" placeholder="Ingresa correo">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAeFBMVEUAAAD////8/PwNDQ0HBwcUFBT5+fnk5OQQEBB6enqVlZXJycnu7u6QkJDMzMwzMzOrq6tcXFwnJyfz8/MiIiJKSkptbW3U1NQZGRk1NTV2dnZCQkLg4OCysrItLS2bm5uCgoI9PT29vb1WVlalpaVQUFBkZGSIiIhAedyCAAAE3ElEQVR4nL2b2ZaySgyFi7mZFAXBuXFoff83/JvT66hAFZmAfa/5lBqSnaAsppIs3a8Oa8dZH1b7NEu436NYnzqmB1e1dUiPcwEE9VJpda6DGQDy2tGHb+SE+cQAfuSZwzfyUn9KgNN6OHyjIpsOIITDN9rb0wDkP7j4Sv0QVgIe4HjGxv/dD/gtiQaIgdXXlhePDVB9UeIr9VWNC5Agln9ba+ThjAOwN9T4v2czbi/gAPb0+EqV4wHcOfGV+h4LICdtgLe+MMsAA4A8APvajwMQdK9+tFzEeYQAeHDjK7UaA6Dix1dqMQLASgJwkwP4xDO4LRdMT0CAqyS+UicxQCkDeIgBtjIAD7oRIICFLL5SUGIAAdRSgFAIINqEjaCNCAEcpAAXIQAhE9WrEAKIjqFGrgwgl8ZXCkgKAICjHABIjwEA0VX4J+AgAAASOQCQlECLkJ0NvQTchxBAIY3vAQEggJ0UYCkEQJfkJm2EAMJ0AE4IIABmUfQWVB5BAIl0G0DVEZgRCa/DC/T9IEAkA0jFAIEMACzO4MLE4MvidAa/Hgb4lgCATwABYJPtobcK2LdFVMcZH+AOfzvGoLhw40P3ABYg5gJcRwLg3kjQPYQHSFhZQYGyKnE+YTXQJTHJwZm1SKv2RAcAnQESgPWkxn8ivxht1xOrVIQ/RgSg2ZVQUc4BsDJ0buIiTkAGgLVA2jVbdLuECGAFqEN5R+qfEhuXGXgkFYS/nwFg+emgd09unDKa13loPBYZrWNW+96/lprluH2cqL+eC9AoDncfENtdSFn5YwA0soP4FEWnOKD0iscEGEVIADun/kof+QEEgB0/N78L/3xHM9jZxVXO5hkjPgEA+H/B/7RELrTFq5ZpICQWTVJ3fMoSsc/zjqXwVQ+mZgMASdi3SbfgfEbWPyIGEYwAyV5/4J2jgX8hj/TeshMaEQwAyd58+TulId2sSnPuakTQA1yBm/9c3jt3bnAvAWO90PcQtQApJvcpbmUdZddrFtXlDVM4uFq7SAOQi7skJj00W7IPQJmWoWrXN0x6ACdxi2JIXq9e7QKIfUFI3YOkAxDL3XFA7mIIIBD2STHaBmYAX+SIYbXMjQC3OeJ3epmfAPU88duV4weAwA2j6q4DSCY9ANpyEg0Aa1yLq7IPcJz8BPjUe8LoBTDZDaTXrQsgnpSgatEBEM8JUHVoAwjbEhwFLQC2HcxX1QKwZzwE/rRpPwJZX4Qht+oAWIyxVYlevZwXQDDrQ7jYPYBZH4LzTk4/bsMZH0Jk6QAC5vAsXQdLC2DFjLYER+fEAGCdZrkR21lpOyueYyF25u47dUE9eXy3Uxt1KyPBEDFOQGXEGuSnqNfN7hWnuXhwZ0j9kf9+eZ6wW8Wc+DqDwp+sQNJNE+gsGnuaDN3VWnx6kyqdIL7hzR+DTTf+mbg2jLOYjErae02wLian0uyUjlmpuE+jbz7gFV/Fs4T/azMwTTTklvvhKCvBG+wkDvcLqhEOpcfwIAXUMfkW5qpraJAFniV7CJ6DV8tf8fjdD0+mebe7IzqZqK6ZndGLZ3eF6zChX3h8kDLW7RP7Lji+cZmkO+RqcDYZvstI6pzm1/ACQHg/6YLU4yS3bludxM7/voqwb5oKABrZ1X+NmtVhuXWdYrdZ7Z/fp5j39v0/EKtEXaMwWDIAAAAASUVORK5CYII=" class="imagen" alt=""></span>
-                    </div>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Ingresa tu nombre"
+                    />
                   </div>
-                  <p class="msj-error text-light" id="errorCorreo"></p>
+                  <p class="msj-error" id="errorNombre"></p>
                 </div>
-                <div class="form-group row">
-                  <label for="password" class="col-sm-2 col-form-label text-light">Password<span style="color: red;">*</span></label>
+                <div class="col text-light">
+                  <label
+                    for="apellido"
+                    class="col-sm-2 col-form-label text-light"
+                    >Apellido<span style="color: red">*</span></label
+                  >
                   <div class="input-group">
-                    <input type="password" class="form-control text-center" id="password" name="password" placeholder="Ingresa contraseña">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAAAsLCxERETo6OhHR0c7Ozvt7e38/Pzk5ORbW1tfX1/29vapqamUlJTIyMifn5/X19dsbGwICAjDw8PS0tIRERG5ubk0NDQbGxt9fX2ysrK/v78gICCkpKRnZ2eFhYVQUFAYGBiLi4snJyd4eHg4ODiYmJhLI3kbAAAGRklEQVR4nO2d6XYaORBG07iBZm02E7CxDcHY7/+GM4ydM0lcpaX1SVXk1P1tS7rQaKkuSd++laCpD7P56rTbb9fVervfnVbz2aFuitSdn9Hh2K9o+g+PI+nmJdK0xwFj95PBpb3d77K9rD16n6xa6aZ2oV78CNP7j/V7Ld3gSJaXCL3PL3Ip3egIlpNovyvjW3Gsu/ldmdxC1zo9d/a7cp5KC/jY7JMEq+rpIK3gpHlJ9LvyovhrbAF+V9QOj3OQYFXNpVVIpt270K+MFT6p9RNQsKr26saNe6jflXtppd/ZwAWraiMt9SuHDIJVpWhkzPENqlLMJajmQV1mE1TS3Qzj2ryN+/OhtN6/U9GwcbA3WWyWP4fx6XKzmPSC/u9VPogTMteezKjxezQLmQW9FDf6g4W3ibsZ/6QNZzvv/y8K2hB4e5mxr6+4H/uKEI1t+H6Ep5C+cHlyF/Ik+VN8cDctdMQ+vDrLecjq4MQ93b6Ef/aNO/goNio2rm5iG7dQb13j5E7qOX12NKofO1QPudc3V56ztN/L1NGkSYfyXCOrzJL/yDeoW9/gKPAIbXkgjvnouWORjmCyxPyUHym69+45yuwM/xWOE0rlJzjlv0Q2ODpI6dob9pVx8RDqlJ2vpYUBR1yxT6W70+9cS75rLTiWE9OOLgPh73CLxpSfdwdq7pNOf5bYiUTZN/3cwncGKHvGlF12KczMud8ghb/Rhe8ghQfC9XiYEC7X2ZR8WfOY91NmnpBHUPEhMP0dqgnMB5jeTwczZaIOsAro4l/LDfpMhO0Iq4BZR5WLujH9Oa4BzEeIGIvCoONGwGgKEwG6wCrwcSLrRy7h6IXiCViDE2ZehcyCoV9Jrkt1NcziFzlvZKYUpZbBdCB4AK2DnrmVCg3TAzJ2PKbnFKVmNe9k7dgwAx0keYfWEVs7dg1Oz75LBWvorhybUEinOZaKKdLhd2wvQPdmpV5500FN7OqNHi5KxWpOYoalJjX0ezBsoIgOdfWhdfCYIQIzzIsZIjDDvJghAjPMixkiMMO8mCECM8yLGSIww7yYIQIzzIsZIjDDvJghAjPMixkiMMO80IbYXBc6ZyejYTsf9+8+6dNbBQd3SOidJdv/GzGeAxMHGjq9RJ53UK5gm3p8Vz4iN6oyaP0CPwDkEPmPFJAleRdGvpNZUCSe8MJvUVND4qY23T/CD5Ke0ybmlFUp9iljBuqYwLykZNTdwkOaNmIgDwrMR0rGou+oah2kZJiHneUkTc8MzVA9ZmiG+jFDM9SPGZqhfszQDPVjhmaoHzM0Q/2YoRnqR5lh4JWIMegx7J/b5ageLduz69zneLQYPvx6JMHIfZp7HDoMJ38mhQ1x77VUGFLnkHFnXEajwZBO7EG9YVZgyGUugRTlDfnTnZgjICMRN1w5KlghKhA3dGX0uG4fCEba0H3Iftq9rB9IG7pzhyPvwyIRNvQdVAcY+IUNfVlngOxOYUPfsa2Ae+mEDX2bFNjT3W/F0Jv9OUzPYJU17PkMp4A6RA29J1RzJ2ffjOHat5VmmB7WEO5pfIcNspeS3Iyh79hYwPJC2NC1srgCWF1Iz0vdXQ1icSFt6D4q3nU7XSjShu4bExAViBseHRU4LpMLR9zQsR8CE4qSN1xzs+868oJnBnnDak8r1qA9RwoMqy31oN5jvkEdhtSYAQvqKzH8GszAbU7VYfg1mAEIX3yiwnD7dRE1RP0MdRjeEYXfoQpXYUjd8uO+qToCFYbU5RfsbZWxqDCkoqawrkaFIVk6qnANhlRHg+tqNBjS98OwVwpHosGQvmUH1dVoMKSDpoh3h1cUGK6Z4kE5bgoMuQ3z9KVD0Sgw5C6iAnU1Cgz/+owhNlkB1NXIGw6441UazKkU8ob8qwtISpQCw2e2fERMX4MhHxGm74+LRdzQ8RoY8AK4UmDoOj4G0tWIG/4Y8ECi3uKG2TFDM9SPGZqhfszQDPVjhmaoHzM0Q/2YoRnqxwzNUD9maIb6STF8k258EG8JhifpxgcxTjBEZS3lhUuECOEg3fggUu7SgRxbkZ2kq3Qg+5Iyc0wRhKWe5STx0j7cvo9cuPc3BoBJCMmHbxfuzSsCBHXfLZd8r9wHI1CWJJwX32b/cIaz1WuGIx0TWPdWs7BO9B+q1IrQ1mC09gAAAABJRU5ErkJggg==" class="imagen" alt=""></span>
-                    </div>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="apellido"
+                      name="apellido"
+                      placeholder="Ingresa tu apellido"
+                    />
                   </div>
-                  <p class="msj-error text-light" id="errorPassword"></p>
+                  <p class="msj-error" id="errorApellido"></p>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md text-light">
+                    <label for="usuario"
+                      >Usuario<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="usuario"
+                      name="usuario"
+                      placeholder="Ingresa un usuario"
+                    />
+                    <p class="msj-error" id="errorUsuario"></p>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md text-light">
+                    <label for="email"
+                      >Email<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="email"
+                      name="email"
+                      placeholder="Ingresa un email"
+                    />
+                    <p class="msj-error" id="errorEmail"></p>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md text-light">
+                    <label for="contrasenia"
+                      >Contraseña<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="password"
+                      class="form-control text-center"
+                      id="contrasenia"
+                      name="contrasenia"
+                      placeholder="Ingresa una contraseña"
+                    />
+                    <p class="msj-error" id="errorContrasenia"></p>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md text-light">
+                    <label for="repetir"
+                      >Repetir contraseña<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="password"
+                      class="form-control text-center"
+                      id="repetir"
+                      name="repetir"
+                      placeholder="Repite tu contraseña"
+                    />
+                    <p class="msj-error" id="errorRepetir"></p>
+                  </div>
                 </div>
                 <div class="d-grid gap-2 col-12 mx-auto">
-                  <button type="submit" class=" mt-3 btn btn-success pr-5 pl-5">Iniciar Sesión</button>
+                  <button type="submit" class="mt-3 btn btn-danger pr-5 pl-5">
+                    Registrarse
+                  </button>
                 </div>
-                <div class="Forget">
-                  <p class="text-light mt-3 text-center"><a href="" class="fw-bold" style="color: red; ">Olvidaste tu contraseña?</a>
-                </div>
-              </div>
-          <!-- Registrarse -->
-
-                <div id="registrarse" class="div">
-                  <h1 class="text-light text-center">Registrarse</h1>
-                    <div class="form-group row">
-                      <div class="row">
-                        <div class="col text-light">
-                          <label for="nombre" class="col-sm-2 col-form-label text-light">Nombre<span style="color: red;">*</span></label>
-                          <div class="input-group">
-                            <input type="text" class="form-control text-center"  id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                        </div>
-                        <p class="msj-error" id="errorNombre"></p>
-                        </div>
-                        <div class="col text-light">
-                          <label for="apellido" class="col-sm-2 col-form-label text-light">Apellido<span style="color: red;">*</span></label>
-                          <div class="input-group">
-                            <input type="text" class="form-control text-center"  id="apellido" name="apellido" placeholder="Ingresa tu apellido">
-                        </div>
-                        <p class="msj-error" id="errorApellido"></p>
-                      </div>
-                        <div class="form-row">
-                          <div class="form-group col-md text-light">
-                            <label for="usuario">Usuario<span style="color: red;">*</span></label>
-                            <input type="text" class="form-control text-center" id="usuario" name="usuario" placeholder="Ingresa un usuario">
-                            <p class="msj-error" id="errorUsuario"></p>
+                <br />
+                <div class="container">
+                  <div class="row text-center text-light">
+                    <h3 class="col-12">Iniciar sesión:</h3>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="btn btn-light w-100 my-2">
+                        <div class="row align-items-center">
+                          <div class="col-2">
+                            <img
+                              src="assets/img/google.png"
+                              width="32"
+                              alt=""
+                            />
                           </div>
+                          <div class="col-10 text-center">Google</div>
                         </div>
-                        <div class="form-row">
-                          <div class="form-group col-md text-light">
-                            <label for="email">Email<span style="color: red;">*</span></label>
-                            <input type="text" class="form-control text-center" id="email" name="email" placeholder="Ingresa un email">
-                            <p class="msj-error" id="errorEmail"></p>
-                          </div>
-                          <div class="form-row">
-                            <div class="form-group col-md text-light">
-                              <label for="contrasenia">Contraseña<span style="color: red;">*</span></label>
-                              <input type="password" class="form-control text-center" id="contrasenia" name="contrasenia" placeholder="Ingresa una contraseña">
-                              <p class="msj-error" id="errorContrasenia"></p>
-                            </div>
-                            <div class="form-row">
-                              <div class="form-group col-md text-light">
-                                <label for="repetir">Repetir contraseña<span style="color: red;">*</span></label>
-                                <input type="password" class="form-control text-center" id="repetir" name="repetir" placeholder="Repite tu contraseña">
-                                <p class="msj-error" id="errorRepetir"></p>
-                              </div>
-                              <div class="d-grid gap-2 col-12 mx-auto">
-                                <button type="submit" class=" mt-3 btn btn-danger pr-5 pl-5">Registrarse</button>
-                              </div>
-                              <br>
-                            <div class="container">
-                              <div class="row text-center text-light">
-                                <h3 class="col-12">Iniciar sesión:</h3>
-                              </div>
-                              <div class="row">
-                                <div class="col">
-                                  <button class="btn btn-light w-100 my-2" >
-                                    <div class="row align-items-center">
-                                      <div class="col-2">
-                                        <img src="assets/img/google.png" width="32" alt="">
-                                      </div>
-                                      <div class="col-10 text-center">
-                                        Google
-                                      </div>
-                                    </div>
-                                  </button>
-                                </div>
-                                <div class="col">
-                                  <button class="btn btn-primary w-100 my-2" >
-                                    <div class="row align-items-center">
-                                      <div class="col-2">
-                                        <img src="assets/img/fb.png" width="32" alt="">
-                                      </div>
-                                      <div class="col-10 text-center">
-                                        Facebook
-                                      </div>
-                                    </div>
-                                  </button>
-                                </div>
-                              </div>
-                            </div>  
-
+                      </button>
                     </div>
+                    <div class="col">
+                      <button class="btn btn-primary w-100 my-2">
+                        <div class="row align-items-center">
+                          <div class="col-2">
+                            <img src="assets/img/fb.png" width="32" alt="" />
+                          </div>
+                          <div class="col-10 text-center">Facebook</div>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-              </form>
-        </div>  
-  </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
-  
     <script src="assets/js/bootstrap.bundle.js"></script>
     <!-- script propios -->
     <script src="assets/js/login.js"></script>
-</body>
+  </body>
 </html>

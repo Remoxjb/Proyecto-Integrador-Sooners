@@ -19,8 +19,13 @@ body{
 .espacio{
     background-color: #322172;
     border-radius: 25px;
+    margin:auto;
+    padding: auto;
 }
-
+.centrar{
+    margin: auto;
+    padding: auto;
+}
 
 .imagen{
     width: 25px;
