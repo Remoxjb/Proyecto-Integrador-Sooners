@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Proyecto</title>
     <!-- FontAwesome -->
-    <script
-      src="https://kit.fontawesome.com/97b2540957.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/97b2540957.js" crossorigin="anonymous"></script>
 
     <!-- Link-bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
@@ -18,39 +16,31 @@
     <!-- Mis estilos -->
 
     <link rel="stylesheet" href="assets/css/login.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- LOGIN USUARIOS -->
 
     <div class="container w-75 centar">
-      <div class="row espacio">
-        <div class="row"> 
-          <div class="col-sm-6">
-            <button
-              id="iniciarSesion"
-              class="btn btn-outline-success w-100 my-3"
-              onclick="mostrarSesion()"
-            >
+        <div class="row espacio">
+            <div class="row">
+                <div class="col-sm-6">
+                    <button id="iniciarSesion" class="btn btn-outline-success w-100 my-3" onclick="mostrarSesion()">
               Iniciar Sesión
             </button>
-          </div>
-          <div class="col-sm-6">
-            <button
-              id="registro"
-              class="btn btn-outline-danger w-100 my-3"
-              onclick="mostrarRegistro()"
-            >
+                </div>
+                <div class="col-sm-6">
+                    <button id="registro" class="btn btn-outline-danger w-100 my-3" onclick="mostrarRegistro()">
               Registrarse
             </button>
-          </div>
-        </div>
-        <!-- Contenido de los Formularios -->
-        <form id="fomr1" class="row">
-          <div class="container">
-            <div id="inicio" class="row">
-              <h1 class="text-light text-center">Iniciar Sesión</h1>
-              <label for="correo" class="col-sm-2 col-form-label text-light"
-                >Email<span style="color: red">*</span></label
+                </div>
+            </div>
+            <!-- Contenido de los Formularios -->
+            <form id="fomr1" class="row">
+                <div class="container">
+                    <div id="inicio" class="row">
+                        <h1 class="text-light text-center">Iniciar Sesión</h1>
+                        <label for="correo" class="col-sm-2 col-form-label text-light">Email<span style="color: red">*</span></label
               >
               <div class="input-group">
                 <input
@@ -101,7 +91,7 @@
               </div>
               <div class="Forget">
                 <p class="text-light mt-3 text-center">
-                  <a href="" class="fw-bold" style="color: red"
+                  <a href="" class="fw-bold" style="color: rgb(161, 161, 161)"
                     >Olvidaste tu contraseña?</a
                   >
                 </p>
