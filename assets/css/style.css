@@ -590,20 +590,3 @@ body {
 #ayuda {
     padding-top: 100px;
 }
-
-.container-3 {
-    padding: 25px;
-    background-color: #cda9f5;
-    color: #000000;
-    position: absolute;
-    float: bottom;
-    width: 100%;
-
-}
-
-
-
-footer a:hover {
-    color: #8e74f0;
-
-}

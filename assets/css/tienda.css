@@ -3,26 +3,25 @@ body {
     background-color: #322172;
 }
 
+
 /*Profilebutton*/
 
-.profile-container{
+.profile-container {
     height: 100%;
     width: auto;
     display: flex;
-    
 }
 
-.action{
+.action {
     justify-content: flex-end;
     align-items: center;
     justify-content: center;
     position: fixed;
     top: 15px;
     right: 30px;
-
 }
 
-.action .profile{
+.action .profile {
     position: relative;
     width: 50px;
     height: 50px;
@@ -33,7 +32,7 @@ body {
     justify-content: center;
 }
 
-.action .profile img{
+.action .profile img {
     height: 60px;
     width: 60px;
     position: absolute;
@@ -44,27 +43,26 @@ body {
     object-fit: cover;
 }
 
-.action .menu{
+.action .menu {
     position: absolute;
     top: 80px;
     right: 10px;
     padding: 10px 20px;
     background: #fff;
     width: 200px;
-    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
-
 }
 
-.action .menu.activate{
+.action .menu.activate {
     visibility: visible;
     opacity: 1;
 }
 
-.action .menu::before{
+.action .menu::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -73,12 +71,9 @@ body {
     height: 20px;
     background-color: beige;
     transform: rotate(45deg);
-
 }
 
-
-
-.action .menu h3{
+.action .menu h3 {
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -87,49 +82,47 @@ body {
     font-size: 18px;
     color: #555;
     line-height: 1.2em;
-
 }
 
-.action .menu h3 span{
+.action .menu h3 span {
     font-size: 14px;
     color: #cecece;
     font-weight: 400;
 }
 
-.action .menu ul li{
+.action .menu ul li {
     list-style: none;
     padding: 10px 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     direction: flex;
     align-items: center;
     justify-content: center;
 }
 
-.action .menu ul li img{
+.action .menu ul li img {
     max-width: 20px;
     margin-right: 10px;
     opacity: 0.5;
     transition: 0.5s;
-
 }
 
-.action .menu ul li:hover img{
+.action .menu ul li:hover img {
     opacity: 1;
-
 }
 
-.action .menu ul li a{
+.action .menu ul li a {
     display: inline-block;
     text-decoration: none;
     color: #555;
     font-weight: 500;
     transition: 0.5s;
-
 }
 
-.action .menu ul li:hover a{
+.action .menu ul li:hover a {
     color: #ff5d94;
 }
+
+
 /*end*/
 
 
@@ -436,7 +429,7 @@ body {
 .estrella:nth-child(4) {
     width: 120px;
     height: 120px;
-    left: 90%;
+    left: 70%;
     box-shadow: 0px 0px 10px 5px #fff;
     animation-duration: 160s;
     animation-delay: 2s;
@@ -494,18 +487,6 @@ body {
     box-shadow: 0px 0px 10px 5px #fff;
     animation-duration: 200s;
     animation-delay: 0s;
-}
-
-
-/* !Footer */
-
-.container-3 {
-    padding: 25px;
-    background-color: #b3b3b3;
-    color: #000000;
-    position: absolute;
-    float: bottom;
-    width: 100%;
 }
 
 
