@@ -33,7 +33,7 @@ for (let i = 0; i < $btn_carritos.length; i++) {
         console.log($datosCartas);
 
 
-        window.open("../mostrararticulo.html", "ventana1", "width=1200,height=800,scrollbars=NO");
+
 
     })
 
