@@ -1,74 +1,82 @@
-section{
-    color:#f3ddbd;
-}
-.texto-ayuda{
-    font-weight: bold;
-}
-.container-1{
-    padding-top:50px;
-}
-
-.container-1 p{
-    color: #fff;;
+.container-1 p {
+    color: #fff;
+    ;
     text-shadow: 0 0 5px;
 }
-.titulo-h2{
+
+.titulo-h2 {
     font-weight: bold;
-    color:#ffffff;
+    color: #ffffff;
     text-shadow: 0 0 10px;
 }
 
-
-.container-2{
-    margin-top:100px;
-    text-align:center;
-    color:white;
+.container-2 {
+    margin-top: 100px;
+    text-align: center;
+    color: white;
 }
 
-
-.icon{
-    color:#d5aff0;
-    font-size:5rem;
-    
+.icon {
+    color: #d5aff0;
+    font-size: 5rem;
 }
-.icon:hover{
-    cursor:pointer;
-    color:#d5aff0;
+
+.icon:hover {
+    cursor: pointer;
+    color: #d5aff0;
     font-size: 6rem;
     text-shadow: 0 0 5px #ffffff;
     transition: .5s;
-    
 }
 
+.container-3 {
+    background-color: #cccccc;
+    width: auto;
+}
 
-.container-3{
-    padding: 25px;
-    background-color:#b3b3b3;
-    color:#000000;
-    position: absolute;
-    float: bottom;
-    
+.container-3 p {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.container-3 .footer {
     width: 100%;
-    
-    
-
-}
-.icon-activo{
-    
-    color:#ffffff;
-    font-size:5rem;
+    padding: 5px;
+    background-color: #cccccc;
 }
 
-.texto-js{
+.row-iconos {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+/* .container-3 .col {
+    padding: 0;
+} */
+
+.container-3 a {
+    width: 50%;
+    color: #000000;
+}
+
+.container-3 a:hover {
+    color: #520096;
+}
+
+.text-footer-titulo {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.icon-activo {
+    color: #ffffff;
+    font-size: 5rem;
+}
+
+.texto-js {
     border-radius: 15px;
     padding: 15px;
-    background-color:#fff;
-}
-
-/* Posicionar pagina */
-@media(max-width:990px){
-    section{
-        margin-top:calc(100vh);
-        margin-left: calc(2rem + 2vw);;
-    }
+    background-color: #fff;
 }
