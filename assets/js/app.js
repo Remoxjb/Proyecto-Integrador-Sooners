@@ -4,9 +4,9 @@ const $linksNosotros = document.querySelectorAll(".portafolio");
 
 const $nosotros = document.querySelectorAll(".nosotros");
 
+const $contanedorLista = document.getElementById("contenedor-lista-nosotros");
 
-
-
+console.log($contanedorLista);
 
 const ptf_1 = `
 <div class="row contenedor-js-app-1" id="contenedor-js-1">
@@ -220,7 +220,7 @@ function mostrarPantalla(t) {
 }
 
 function scrollClick() {
-    window.scroll(0, 1600)
+    $contanedorLista.scrollIntoView(true)
 }
 
 
