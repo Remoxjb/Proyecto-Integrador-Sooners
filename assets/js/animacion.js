@@ -44,7 +44,7 @@ window.sr = ScrollReveal();
     
     
     var typed = new Typed('.typed', {
-        strings:["","Encuentra el diseño y estilo que necesitas para tu pagina web }"],
+        strings:["","Encuentra el diseño y estilo que necesitas para tu página web }"],
         typeSpeed:30,
         backSpeed: 55,
         loop:true,
