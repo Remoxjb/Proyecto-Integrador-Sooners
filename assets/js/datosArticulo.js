@@ -30,8 +30,8 @@ for (let i = 0; i < $btn_carritos.length; i++) {
 
         /* Carrito datos */
 
-        console.log($datosCartas);
 
+        console.log($datosCartas);
 
 
 
