@@ -3,22 +3,20 @@ body {
     background-color: #322172;
 }
 
-
-.header-section{
+.header-section {
     justify-content: space-between;
     margin: auto;
     align-items: center;
     position: relative;
 }
 
-.header-section div{
+.header-section div {
     align-items: center;
     margin-top: -30px;
     margin-right: -15px;
-
 }
 
-.header-section p{
+.header-section p {
     position: absolute;
     top: 25px;
     right: -8px;
@@ -30,22 +28,24 @@ body {
     font-family: system-ui;
     line-height: 18px;
 }
-.logo{
+
+.logo {
     width: 164px;
     height: 84px;
     cursor: pointer;
 }
 
-.cart{
+.cart {
     width: 39px;
     height: 38px;
     cursor: pointer;
 }
-.cart-products{
+
+.cart-products {
     position: absolute;
     top: 82px;
     right: -18px;
-    background-color:rgba(156, 76, 225, 0.9);
+    background-color: rgba(156, 76, 225, 0.9);
     padding: 10px 18px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     display: none;
@@ -54,8 +54,10 @@ body {
     border-radius: 15px;
 }
 
+
 /*end header*/
-.products{
+
+.products {
     /* margin-top: 60px; */
     padding-top: 170px;
     display: flex;
@@ -63,22 +65,25 @@ body {
     justify-content: space-between;
 }
 
-.carts{
+.carts {
     max-width: 250px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     padding-bottom: 34px;
     margin-bottom: 40px;
 }
-.carts img{
+
+.carts img {
     width: 100%;
 }
-.carts p{
+
+.carts p {
     font-family: system-ui;
     font-weight: 500;
     padding: 0 20px;
     margin-bottom: 24px;
 }
-.carts div p{
+
+.carts div p {
     position: absolute;
     top: 0;
     right: 0px;
@@ -87,10 +92,12 @@ body {
     padding: 2px 7px 4px 21px;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
-.carts div{
+
+.carts div {
     position: relative;
 }
-.carts a{
+
+.carts a {
     font-family: system-ui;
     text-decoration: none;
     background: #3D2B7E;
@@ -101,50 +108,53 @@ body {
     font-weight: 700;
 }
 
-.carts a:hover{
+.carts a:hover {
     background: #fff;
     color: #3D2B7E;
     border: solid 2px white;
     transition-duration: .3s;
 }
 
-.cart-products .item img{
+.cart-products .item img {
     width: 80px;
     height: 80px;
     border-radius: 5px;
     margin-bottom: 5px;
     margin-top: 5px;
-    
 }
 
-.cart-products h6{
+.cart-products h6 {
     padding: 10px;
 }
 
-.cart-products .item{
+.cart-products .item {
     display: flex;
     align-items: center;
     height: 120px;
     width: auto;
     /* border-bottom: solid 3px #d5ceee; */
 }
-.cart-products .item .item-content{
+
+.cart-products .item .item-content {
     margin: 0 19px;
     width: 201px;
 }
-.cart-products .item .item-content h5{
+
+.cart-products .item .item-content h5 {
     margin: 0;
     font-size: 15px;
     font-weight: 400;
     font-family: system-ui;
 }
-.cart-products .item .item-content h6{
+
+.cart-products .item .item-content h6 {
     margin: 0;
     font-size: 13px;
     font-weight: 400;
     font-family: system-ui;
 }
-.cart-products .item span{
+
+.cart-products .item span {
     background-color: #3D2B7E;
     padding: 0px 5px;
     border-radius: 50%;
@@ -153,51 +163,53 @@ body {
     cursor: pointer;
     margin-right: 30px;
 }
-.cart-products h3{
+
+.cart-products h3 {
     margin-bottom: 0;
 }
-.cart-products .item .item-content h5.cart-price{
+
+.cart-products .item .item-content h5.cart-price {
     font-weight: 700;
 }
 
+
 /*stye to btn close*/
-p.close-btn{
+
+p.close-btn {
     top: 4px;
     right: 6px;
     cursor: pointer;
     color: #000;
 }
 
-.btn-carrito img{
+.btn-carrito img {
     height: 20px;
     width: 20px;
     color: white;
-
 }
+
 
 /*END*/
 
 
 /*Profilebutton*/
 
-.profile-container{
+.profile-container {
     height: 100%;
     width: auto;
     display: flex;
-    
 }
 
-.action{
+.action {
     justify-content: flex-end;
     align-items: center;
     justify-content: center;
     position: fixed;
     top: 15px;
     right: 30px;
-
 }
 
-.action .profile{
+.action .profile {
     position: relative;
     width: 45px;
     height: 45px;
@@ -209,7 +221,7 @@ p.close-btn{
     margin-top: 10px;
 }
 
-.action .profile img{
+.action .profile img {
     height: 45px;
     width: 45px;
     position: absolute;
@@ -220,27 +232,26 @@ p.close-btn{
     object-fit: cover;
 }
 
-.action .menu{
+.action .menu {
     position: absolute;
     top: 80px;
     right: 10px;
     padding: 10px 20px;
     background: #fff;
     width: 200px;
-    box-sizing: 0 5px 25px rgba(0,0,0,0.1);
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     transition: 0.5s;
     visibility: hidden;
     opacity: 0;
-
 }
 
-.action .menu.activate{
+.action .menu.activate {
     visibility: visible;
     opacity: 1;
 }
 
-.action .menu::before{
+.action .menu::before {
     content: '';
     position: absolute;
     top: -5px;
@@ -249,10 +260,9 @@ p.close-btn{
     height: 20px;
     background-color: beige;
     transform: rotate(45deg);
-
 }
 
-.action .menu h3{
+.action .menu h3 {
     width: 100%;
     text-align: center;
     font-size: 18px;
@@ -261,49 +271,47 @@ p.close-btn{
     font-size: 18px;
     color: #555;
     line-height: 1.2em;
-
 }
 
-.action .menu h3 span{
+.action .menu h3 span {
     font-size: 14px;
     color: #cecece;
     font-weight: 400;
 }
 
-.action .menu ul li{
+.action .menu ul li {
     list-style: none;
     padding: 10px 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     direction: flex;
     align-items: center;
     justify-content: center;
 }
 
-.action .menu ul li img{
+.action .menu ul li img {
     max-width: 20px;
     margin-right: 10px;
     opacity: 0.5;
     transition: 0.5s;
-
 }
 
-.action .menu ul li:hover img{
+.action .menu ul li:hover img {
     opacity: 1;
-
 }
 
-.action .menu ul li a{
+.action .menu ul li a {
     display: inline-block;
     text-decoration: none;
     color: #555;
     font-weight: 500;
     transition: 0.5s;
-
 }
 
-.action .menu ul li:hover a{
+.action .menu ul li:hover a {
     color: #ff5d94;
 }
+
+
 /*end*/
 
 
@@ -451,6 +459,7 @@ p.close-btn{
     transition-delay: 0.75s;
 }
 
+
 /* Títulos */
 
 .texto-tienda {
@@ -537,9 +546,8 @@ p.close-btn{
     box-shadow: 0 0 15px #fff;
 }
 
-.btn-carrito q{
+.btn-carrito q {
     pointer-events: none;
-
 }
 
 
@@ -666,50 +674,34 @@ p.close-btn{
     animation-delay: 0s;
 }
 
-/* !Footer */
-
-.container-3 {
-    padding: 25px;
-    background-color: #b3b3b3;
-    color: #000000;
-    position: absolute;
-    float: bottom;
-    width: 100%;
-}
-
-@media all and (max-widht: 900px)
-           and (min-widht: 300px)
-        {   .action{
-                justify-content: flex-end;
-                align-items: center;
-                justify-content: center;
-                /* position: fixed; */
-                top: 15px;
-                right: 30px;
-
-            }
-
-            .action .profile{
-                /* position: relative; */
-                width: 45px;
-                height: 45px;
-                border-radius: 50%;
-                overflow: hidden;
-                cursor: pointer;
-                align-items: center;
-                justify-content: center;
-                margin-top: 10px;
-
-            }
-        
-            .action .profile img{
-                height: 45px;
-                width: 45px;
-                /* position: absolute; */
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+@media all and (max-widht: 900px) and (min-widht: 300px) {
+    .action {
+        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
+        /* position: fixed; */
+        top: 15px;
+        right: 30px;
     }
+    .action .profile {
+        /* position: relative; */
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .action .profile img {
+        height: 45px;
+        width: 45px;
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

@@ -31,7 +31,6 @@
 
 .container-3 {
     background-color: #cccccc;
-    width: auto;
 }
 
 .container-3 p {
@@ -42,6 +41,7 @@
 
 .container-3 .footer {
     width: 100%;
+    height: auto;
     padding: 5px;
     background-color: #cccccc;
 }
