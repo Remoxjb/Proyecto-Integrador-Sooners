@@ -37,13 +37,16 @@ const ptf_2 = `
         </div>
         <h4>Alejandro Andrade</h4>
         <h6>Full Stack Developer</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae accusamus deserunt ducimus repellendus odio similique asperiores,</p>
+        <p> 
+          Estudiante de la carrera de ingeniería en sistemas computacionales,
+          apasionado por la tecnología y programación 
+        </p>
     </div>
     <div class="links">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/alejandro-andrade-rangel"><i class="fa-brands fa-linkedin-in"></i></a>
         
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/AleRangel"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto: ale.andrade.rangel@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
   </div>
