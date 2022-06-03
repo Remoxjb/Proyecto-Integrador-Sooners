@@ -7,12 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/tienda.css">
-    <link rel="stylesheet" href="assets/css/seccion_ayuda.css">
     <title>SoonPages</title>
 </head>
 
 <body>
 
+
+
+    <!-- Falta sección de Edu y Daniel -->
+    <!--  
+ <div class="container-fluid bg-animado">
+         
+                <div class="container-fluid d-flex contenerdor-portada">
+                  
+                    <div class="row mt-5">
+                        <div class="col-12 mb-5">
+
+                            <h2 class="titulo-h2">Adquiere la plantilla que más te guste</h2>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-5">
+                        <p class="texto-portada">¡Entra a la tienda a hora!</p>
+                        <div class="container-fluid btn-scroll">
+        
+                            <a type="button" href="#recientes" class="btn-portada text-center">
+                              <span id="span1"></span>
+                              <span id="span2"></span>
+                              <span id="span3"></span>
+                              <span id="span4"></span>
+                              Click Aquí
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+            
+              
+            
+              
+              
+             
+              
+              
+            </div> -->
+
+
+    <!-- <h2 class="text-center mb-5 texto-tienda mt-5" id="recientes">Diseño mas recientes</h2> -->
     <!-- !Navbar -->
     <nav class="navbar navbar-tienda navbar-expand-lg navbar-dark  sticky-top mb-5">
         <div class="container-fluid">
@@ -48,23 +88,38 @@
                                 <a class="nav-link aria-current" href="seccionesTienda/blogs.html">Blogs</a>
                             </li>
                         </ul>
-                        <div class="profile-container">
-                            <div class="action">
-                                <div class="profile" onclick="menuToggle();">
-                                    <img src="https://images.pexels.com/photos/3134555/pexels-photo-3134555.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                        <div class="cart-container">
+                            
+                            <div class="header-section container">
+                                <div>
+                                    <img onclick="showCart(this)" class="cart" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="logo de carrito">
+                                    <p class="count-product">0</p>
                                 </div>
-                                <div class="menu">
-                                    <h3>Someone<br><span>Website Designer</span></h3>
-                                    <ul>
-                                        <li><img src="https://cdn-icons-png.flaticon.com/512/618/618631.png"><a href="./ProfilePage.html">My profile</a></li>
-                                        <li><img src="https://as2.ftcdn.net/v2/jpg/01/07/62/07/1000_F_107620769_UwNVSoXnKS4VNcOKoZjPohlEPn83oE38.jpg"><a href="./formularioSubirArchivo.html">Subir diseño</a></li>
-                                        <li><img src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png"><a href="#">Canasta</a></li>
-                                        <li><img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png"><a href="#">Log Out</a></li>
-                                    </ul>
+                                <div class="cart-products" id="products-id">
+                                    <p class="close-btn" onclick="closeBtn()">X</p>
+                                    <h6>Mi carrito</h6>
+                                    <div class="card-items">
+                                    </div>
+                                    <h6>Total: <strong class="price-total">0</strong> $</h6>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="location.href='./indexPago.html'">Pagar</button>
                                 </div>
                             </div>
                         </div>
-
+                            <div class="profile-container">
+                                <div class="action">
+                                    <div class="profile" onclick="menuToggle();">
+                                          <img src="https://images.pexels.com/photos/3134555/pexels-photo-3134555.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                    </div>                 
+                                  <div class="menu">
+                                      <h3>Someone<br><span>Website Designer</span></h3>
+                                      <ul>
+                                          <!-- <li><img src="https://cdn-icons-png.flaticon.com/512/618/618631.png"><a href="./ProfilePage.html">My profile</a></li>       -->
+                                          <li><img src="https://as2.ftcdn.net/v2/jpg/01/07/62/07/1000_F_107620769_UwNVSoXnKS4VNcOKoZjPohlEPn83oE38.jpg"><a href="./formularioSubirArchivo.html">Subir diseño</a></li>
+                                          <li><img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png"><a href="#">Log Out</a></li>
+                                      </ul>
+                                  </div>
+                                 </div>
+                              </div> 
                     </div>
                 </div>
             </div>
@@ -76,130 +131,152 @@
     </nav>
     <!--  -->
 
-    <!-- !Tienda artículos -->
-    <h2 class="text-center mb-5 texto-tienda" id="populares">Nuevos</h2>
-    <div class="container mt-5 mb-5 background" id="TiendaNuevos">
-        <div class="row row-cols-1 row-cols-md-4 g-4 row-tienda tienda-scroll">
-            <div class="col">
+<!-- !Tienda artículos -->
+        <h2 class="text-center mb-5 texto-tienda" id="populares">Nuevos</h2>
 
-                <div class="card ">
+        <div class="container mt-5 mb-5 background" id="TiendaNuevos">
+            <div class="row row-cols-1 row-cols-md-4 g-4 row-tienda tienda-scroll">
 
-                    <a href="mostrararticulo.html">
-                        <img src="https://images01.nicepage.com/page/96/73/html-template-96735.jpg" class="card-img-top" alt="...">
-                    </a>
-                    <div class="card-body">
-
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
-                    </div>
+                <div class="col">                      
+                        <div class="card ">
+                            <div>
+                            <a href="./mostrararticulo.html">
+                            <img src="https://images01.nicepage.com/page/96/73/html-template-96735.jpg" class="card-img-top" alt="..." onclick="location.href='./mostrararticulo.html'">
+                            </a>
+                            </div>                           
+                            <div class="card-body">   
+                                <Button class="btn-card"><i>100.00</i></Button>
+                                <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="1"></q></button>
+                            </div>
+                        </div> 
                 </div>
-
-            </div>
-            <div class="col">
-
-                <a href="mostrararticulo.html">
+                <div class="col">  
+                    <a href="./mostrararticulo.html">
+                        <div class="card">
+                            <div>
+                            <img src="https://images01.nicepage.com/page/31/08/html-template-31086.jpg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">   
+                                <Button class="btn-card"><i>100.99</i></Button>
+                                <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="2"></q></button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
                     <div class="card">
-                        <img src="https://images01.nicepage.com/page/31/08/html-template-31086.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <Button class="btn-card">$00.00</Button>
-                            <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                        <div>
+                        <img src="https://images01.nicepage.com/page/71/06/html-template-71063.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="3"></q></button>
                         </div>
                     </div>
-                </a>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/71/06/html-template-71063.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/26/81/html-template-26813.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="4"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/26/81/html-template-26813.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/66/95/html-template-66953.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="5"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/66/95/html-template-66953.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/63/54/es/plantilla-html-63541.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="6"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/63/54/es/plantilla-html-63541.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/70/26/es/plantilla-html-70266.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="7"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/70/26/es/plantilla-html-70266.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/29/37/es/plantilla-html-29376.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="8"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/29/37/es/plantilla-html-29376.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/32/49/es/plantilla-html-32495.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="9"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/32/49/es/plantilla-html-32495.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/24/59/es/plantilla-html-24595.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="10"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/24/59/es/plantilla-html-24595.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/24/59/es/plantilla-html-24595.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="11"></q></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/24/59/es/plantilla-html-24595.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images01.nicepage.com/page/24/59/es/plantilla-html-24595.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <Button class="btn-card">$00.00</Button>
-                        <button class="btn-carrito"><i class="fa-solid fa-cart-shopping"></i></button>
+                <div class="col">
+                    <div class="card">
+                        <div>
+                        <img src="https://images01.nicepage.com/page/24/59/es/plantilla-html-24595.jpg" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">   
+                            <Button class="btn-card"><i>100.00</i></Button>
+                            <button class="btn-carrito"><q class="fa-solid fa-cart-shopping" data-id="12"></q></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--  -->
+
+<!--  -->
 
 
     <!-- !TiendaArticulos2 -->
@@ -336,25 +413,22 @@
 
     <!-- !Footer -->
     <footer class="container-3">
-        <div class="row row-cols-1 row-cols-md-3 footer p-0">
-            <div class="col p-0">
+        <div class="row row-cols-1 row-cols-md-3 p-3">
+            <div class="col">
                 <p class="text-center">Todos los derechos reservados, equipo Sooners</p>
             </div>
-            <div class="col p-0">
-
-                <div class="row g-0 row-iconos">
-                    <div class="col-12 text-center mb-3 text-footer-titulo">SoonThemes</div>
-                    <!-- Falta hover para links -->
-                    <div class="col text-center"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></div>
-                    <div class="col text-center"><a href=""><i class="fa-brands fa-github"></i></a></div>
-                    <div class="col text-center"><a href=""><i class="fa-brands fa-pinterest"></i></a></div>
-                    <div class="col text-center"><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-
-
+            <div class="col">
+                <div class="row ">
+                    <div class="col-12 text-center mb-1">PageSoners</div>
+                    <!-- Falta Hover para links -->
+                    <div class="col text-center"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="col text-center"><i class="fa-brands fa-github"></i></div>
+                    <div class="col text-center"><i class="fa-brands fa-pinterest"></i></div>
+                    <div class="col text-center"><i class="fa-brands fa-facebook"></i></div>
                 </div>
 
             </div>
-            <div class="col p-0 col-footer">
+            <div class="col">
                 <p class="text-center">Generetion México 2022</p>
             </div>
         </div>
@@ -369,14 +443,24 @@
     <!-- scrollreveal -->
     <script src="assets/js/scrollreveal.js"></script>
     <script src="assets/js/scrollrevealTienda.js"></script>
-    <script src="assets/js/datosArticulo.js"></script>
+
     <script src="assets/js/bootstrap.js"></script>
     <script>
-        function menuToggle() {
-            const toggleMenu = document.querySelector('.menu');
-            toggleMenu.classList.toggle('activate')
-        }
+        function menuToggle(){
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('activate')
+        } 
     </script>
+
+    <script>
+    function showCart(x){
+        document.getElementById("products-id").style.display = "block";
+    }
+    function closeBtn(){
+         document.getElementById("products-id").style.display = "none";
+    }
+    </script>
+    <script src="./assets/js/tienda.js"></script>
 </body>
 
 </html>
