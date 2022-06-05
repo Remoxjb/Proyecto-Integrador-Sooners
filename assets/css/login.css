@@ -5,6 +5,9 @@ body{
     justify-content: center;
     min-height: 100vh;
     background: #322172;
+    position: relative;
+    padding-bottom: 8em;
+    min-height: 100vh;
 }
 
 
@@ -33,4 +36,10 @@ body{
 
 .row{
     margin-left: 0;
+}
+
+.container-3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
