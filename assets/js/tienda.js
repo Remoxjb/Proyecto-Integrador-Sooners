@@ -82,7 +82,7 @@ function readTheContent(product) {
 
 
 function loadHtml() {
-    debugger
+
     clearHtml();
     buyThings.forEach(product => {
         const { image, price, amount, id } = product;

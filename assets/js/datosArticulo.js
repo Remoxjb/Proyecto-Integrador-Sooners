@@ -23,7 +23,7 @@ for (let i = 0; i < $btn_carritos.length; i++) {
 
         const $datosCartas = {
             id: btnCarrito.parentElement.parentElement.id,
-            titulo: btnCarrito.parentElement.children[0].textContent,
+
             img: btnCarrito.parentElement.parentElement.children[0].children[0].src,
             precio: btnCarrito.parentElement.parentElement.children[1].children[1].textContent
         }
