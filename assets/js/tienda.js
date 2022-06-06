@@ -26,7 +26,7 @@ function addProduct(e) {
 }
 
 function deleteProduct(e) {
-    debugger
+
     if (e.target.classList.contains('delete-product')) {
         const deleteId = e.target.getAttribute('data-id');
 
