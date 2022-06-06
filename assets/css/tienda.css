@@ -53,7 +53,7 @@ body {
     height: auto;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 10px rgb(255, 255, 255);
-    background: #592cad69;
+    background: #5c3a9ce8;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
 }
@@ -241,7 +241,7 @@ p.close-btn {
     top: 80px;
     right: 10px;
     padding: 10px 20px;
-    background: #fff;
+    background: #cccccc;
     width: 200px;
     box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -262,7 +262,7 @@ p.close-btn {
     right: 28px;
     width: 20px;
     height: 20px;
-    background-color: beige;
+    background-color: #cccccc;
     transform: rotate(45deg);
 }
 
@@ -312,7 +312,7 @@ p.close-btn {
 }
 
 .action .menu ul li:hover a {
-    color: #ff5d94;
+    color: #2c125e;
 }
 
 
@@ -321,6 +321,15 @@ p.close-btn {
 
 /* !Navbar */
 
+.contenedor-navbar-collapse {
+    width: 100%;
+    padding-right: 0;
+}
+
+.contenedor-navbar-collapse .row {
+    width: 100%;
+}
+
 .menu-centrar {
     justify-content: center;
 }
@@ -328,7 +337,6 @@ p.close-btn {
 .navbar-tienda {
     padding: 0;
     background: #47358980;
-    border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -367,8 +375,8 @@ p.close-btn {
 }
 
 .navbar-toggler {
-    margin-left: 40vw;
-    margin-right: 0;
+    margin-left: auto;
+    float: right;
 }
 
 .navbar-collapse {
@@ -625,8 +633,8 @@ p.close-btn {
 }
 
 .estrella:nth-child(5) {
-    width: 110px;
-    height: 110px;
+    width: 50px;
+    height: 50px;
     left: 65%;
     box-shadow: 0px 0px 10px 5px #fff;
     animation-duration: 100s;
@@ -690,6 +698,12 @@ p.close-btn {
 .cart-products button:hover {
     background: rgb(221, 130, 233);
     box-shadow: 0 0px 5px #fff;
+}
+
+.icon-menu-perfil {
+    padding-left: 5px;
+    margin-right: 10px;
+    color: rgba(85, 85, 85, 0.363);
 }
 
 @media all and (max-widht: 900px) and (min-widht: 300px) {
