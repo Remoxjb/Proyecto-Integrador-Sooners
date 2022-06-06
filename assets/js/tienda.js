@@ -10,28 +10,30 @@ let countProduct = 0;
 // functions
 
 loadEventListeners();
-function loadEventListeners(){
+
+function loadEventListeners() {
     allContainerCart.addEventListener('click', addProduct);
     containerBuyCart.addEventListener('click', deleteProduct);
 
 }
 
-function addProduct(e){
-    e.preventDefault();    
-    if (e.target.classList.contains('btn-carrito')) {  
+function addProduct(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('btn-carrito')) {
         const selectProduct = e.target.parentElement.parentElement;
         readTheContent(selectProduct);
     }
 }
 
 function deleteProduct(e) {
+    debugger
     if (e.target.classList.contains('delete-product')) {
         const deleteId = e.target.getAttribute('data-id');
 
         buyThings.forEach(value => {
             if (value.id == deleteId) {
                 let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
-                totalCard =  totalCard - priceReduce;
+                totalCard = totalCard - priceReduce;
                 totalCard = totalCard.toFixed(2);
             }
         });
@@ -43,7 +45,8 @@ function deleteProduct(e) {
 }
 
 
-function readTheContent(product){
+function readTheContent(product) {
+
     const infoProduct = {
         image: product.querySelector('div img').src,
         price: product.querySelector('div i').textContent,
@@ -58,12 +61,12 @@ function readTheContent(product){
     if (exist) {
         const pro = buyThings.map(product => {
             if (product.id === infoProduct.id) {
-            product.amount++;
-            return product;
+                product.amount++;
+                return product;
             } else {
-            return product
-        }
-        });       
+                return product
+            }
+        });
         buyThings = [...pro];
     } else {
         buyThings = [...buyThings, infoProduct]
@@ -78,10 +81,11 @@ function readTheContent(product){
 
 
 
-function loadHtml(){
+function loadHtml() {
+    debugger
     clearHtml();
     buyThings.forEach(product => {
-        const {image, price, amount, id} = product;
+        const { image, price, amount, id } = product;
         const row = document.createElement('div');
         row.classList.add('item');
         row.innerHTML = `
@@ -100,7 +104,10 @@ function loadHtml(){
     });
 }
 
-function clearHtml(){
-    containerBuyCart.innerHTML = '';
-}
+function clearHtml() {
 
+    containerBuyCart.innerHTML = '';
+    priceTotal.innerHTML = 0;
+    amountProduct.innerHTML = countProduct;
+
+}
