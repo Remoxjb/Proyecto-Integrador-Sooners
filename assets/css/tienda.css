@@ -43,15 +43,19 @@ body {
 
 .cart-products {
     position: absolute;
-    top: 82px;
+    top: 85px;
     right: -18px;
-    background-color: rgba(156, 76, 225, 0.9);
     padding: 10px 18px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     display: none;
+    width: 250px;
     min-width: auto;
     height: auto;
-    border-radius: 15px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+    background: #592cad69;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 
@@ -510,7 +514,7 @@ p.close-btn {
 .btn-card {
     color: #fff;
     border: none;
-    background: rgba(208, 45, 194, 0);
+    background: #d02dc200;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -672,6 +676,20 @@ p.close-btn {
     box-shadow: 0px 0px 10px 5px #fff;
     animation-duration: 200s;
     animation-delay: 0s;
+}
+
+.cart-products {
+    color: #fff;
+}
+
+.cart-products button {
+    color: #ffff;
+    background-color: rgb(58, 26, 100);
+}
+
+.cart-products button:hover {
+    background: rgb(221, 130, 233);
+    box-shadow: 0 0px 5px #fff;
 }
 
 @media all and (max-widht: 900px) and (min-widht: 300px) {
