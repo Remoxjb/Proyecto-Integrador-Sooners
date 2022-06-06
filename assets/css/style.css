@@ -235,7 +235,7 @@ body {
     background: #fff;
     opacity: .3;
     position: absolute;
-    height: 100vh;
+    /* height: 100vh; */
     animation: estrellas 0s linear infinite;
 }
 
