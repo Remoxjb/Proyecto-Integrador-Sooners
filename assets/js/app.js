@@ -33,7 +33,7 @@ const ptf_2 = `
     <div class="content">
         <span></span>
         <div class="img">
-            <img src="https://www.biografiasyvidas.com/biografia/z/fotos/zuckerberg.jpg" alt="">
+            <img src="assets/img/fotoAle.jpg" alt="">
         </div>
         <h4>Alejandro Andrade</h4>
         <h6>Full Stack Developer</h6>
