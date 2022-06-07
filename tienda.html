@@ -47,42 +47,45 @@
                             <li class="nav-item">
                                 <a class="nav-link aria-current" href="seccionesTienda/blogs.html">Blogs</a>
                             </li>
-                        </ul>
-                        <div class="cart-container">
-
-                            <div class="header-section container">
-                                <div>
-                                    <img onclick="showCart(this)" class="cart" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="logo de carrito">
-                                    <p class="count-product">0</p>
-                                </div>
-                                <div class="cart-products" id="products-id">
-                                    <p class="close-btn" onclick="closeBtn()">X</p>
-                                    <h6>Mi carrito</h6>
-                                    <div class="card-items">
+                            <li class="nav-item">
+                                <div class="cart-container">
+                                    <div class="header-section container">
+                                        <div>
+                                            <img onclick="showCart(this)" class="cart" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="logo de carrito">
+                                            <p class="count-product">0</p>
+                                        </div>
+                                        <div class="cart-products" id="products-id">
+                                            <p class="close-btn" onclick="closeBtn()">X</p>
+                                            <h6>Mi carrito</h6>
+                                            <div class="card-items">
+                                            </div>
+                                            <h6>Total: <strong class="price-total">0</strong> $</h6>
+                                            <button type="button" class="btn  btn-sm" onclick="location.href='./indexPago.html'">Pagar</button>
+                                        </div>
                                     </div>
-                                    <h6>Total: <strong class="price-total">0</strong> $</h6>
-                                    <button type="button" class="btn  btn-sm" onclick="location.href='./indexPago.html'">Pagar</button>
                                 </div>
+                            </li> 
+                            <li class="nav-item">
+                                <div class="profile-container action">
+                            
+                                    <div class="profile" onclick="menuToggle();">
+                                        <img src="https://images.pexels.com/photos/3134555/pexels-photo-3134555.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                    </div>
+                                    <div class="menu">
+                                        <h3>Someone<br><span>Website Designer</span></h3>
+                                        <ul>
+                                            <li> <i class="fa-solid fa-upload icon-menu-perfil"></i><a href="formularioSubirArchivo.html">Subir diseño</a></li>
+                                            <li><img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png"><a href="#">Log Out</a></li>
+                                        </ul>
+                                    </div>
+                            
                             </div>
-                        </div>
-                        <div class="profile-container">
-                            <div class="action">
-                                <div class="profile" onclick="menuToggle();">
-                                    <img src="https://images.pexels.com/photos/3134555/pexels-photo-3134555.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
-                                </div>
-                                <div class="menu">
-                                    <h3>Someone<br><span>Website Designer</span></h3>
-                                    <ul>
-                                        <!-- 
-                                            <li><img src="https://cdn-icons-png.flaticon.com/512/618/618631.png"><a href="./ProfilePage.html">My profile</a></li>      
-                                         -->
+                            </li>                    
+                        </ul>
 
-                                        <li> <i class="fa-solid fa-upload icon-menu-perfil"></i><a href="formularioSubirArchivo.html">Subir diseño</a></li>
-                                        <li><img src="https://cdn-icons-png.flaticon.com/512/1250/1250678.png"><a href="#">Log Out</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+
+
+
                     </div>
                 </div>
             </div>
