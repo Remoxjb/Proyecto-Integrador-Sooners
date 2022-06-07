@@ -6,10 +6,15 @@ body{
     min-height: 100vh;
     background: #322172;
     position: relative;
-    padding-bottom: 8em;
+    padding-top: 7em;
+    padding-bottom: 15em;
     min-height: 100vh;
 }
 
+.nav-flotante{
+    position: absolute;
+    top: 0;
+}
 
 #inicio{
     display: block;
