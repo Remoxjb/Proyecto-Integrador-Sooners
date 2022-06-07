@@ -1,67 +1,95 @@
-.contenedor-formulario{
+/* Navbar */
+
+.navbar {
+    background-color: #473589;
+}
+
+.navbar ul li,
+li a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1rem;
+}
+
+.navbar ul li a:hover {
+    cursor: pointer;
+    color: #b55fd9;
+}
+
+.list-nav {
+    display: flex;
+    width: 96vw;
+    margin-bottom: 0;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* Navbar */
+
+.contenedor-formulario {
     width: auto;
-    
     background-color: #322172;
     backdrop-filter: blur(10px);
     width: 100%;
     padding: 10px;
     margin: none;
-    
     -webkit-backdrop-filter: blur(10px);
 }
-.contenedor-formulario .col{
-    padding: 10px;
 
+.contenedor-formulario .col {
+    padding: 10px;
 }
-.contenedor-formulario label{
+
+.contenedor-formulario label {
     color: #b55fd9;
     text-shadow: 0 0 10px;
 }
 
-.textarea{
+.textarea {
     width: 97vw;
 }
-.contenedor-formulario input{
+
+.contenedor-formulario input {
     width: 100%;
     color: #fff;
     text-shadow: 0 0 10px;
     background: none;
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
-    
 }
 
-.contenedor-formulario .checkbox{
-    
-    width: auto ;
+.contenedor-formulario .checkbox {
+    width: auto;
 }
 
-.form-titulo{
+.form-titulo {
     color: white;
     text-shadow: 0 0 10px;
 }
-.btn-formulario{
+
+.btn-formulario {
     border: none;
     padding: 5px 25px 5px 25px;
     background-color: #947de6;
     border-radius: 10px;
 }
-.btn-formulario:hover{
-    background:#b55fd9;
+
+.btn-formulario:hover {
+    background: #b55fd9;
     transition: all .5s;
     box-shadow: 0 0 15px #b55fd9;
 }
 
-.container-3{
+.container-3 {
     padding: 25px;
-    background-color:#b3b3b3;
-    color:#000000;
+    background-color: #b3b3b3;
+    color: #000000;
     position: absolute;
     float: bottom;
-    
     width: 100%;
-    
-    
-
 }
-
