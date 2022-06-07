@@ -18,7 +18,7 @@ $iconoAyuda.forEach(icono => {
                     const iconoInsert = `<i class=" icon-activo fa-solid fa-person-circle-question"></i>`
                     const template = `
                     <div class="col-2 mb-4 text-center">${iconoInsert}</div>
-                    <div class="col"> <p class="texto-js text-dark" id="texto-js">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis fuga in fugiat recusandae ipsa quos ullam repudiandae fugit eius odaoeaoeit.</p> 
+                    <div class="col"> <p class="texto-js text-dark" id="texto-js">Lo que tienes que hacer es mandar un correo en el apartado de contacto o dar click en las redes de nuestro equipo de desarrollo para poder ser parte de SoonThemes.</p> 
                     </div>`
 
                     $divJs.innerHTML = template
