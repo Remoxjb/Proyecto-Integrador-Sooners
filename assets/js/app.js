@@ -84,7 +84,7 @@ const ptf_2 = `
         <p>Soy estudiante de Ingeniería Eléctrica, el diseño es un factor fundamental en cualquier sector, si quieres que tu producto sea tendencia necesitas un buen diseño.</p>
     </div>
     <div class="links">
-    <a href="www.linkedin.com/in/marco-aurelio-campos-alvarez"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="www.linkedin.com/in/marco-aurelio-campos-alvarezgit"><i class="fa-brands fa-linkedin-in"></i></a>
         
     <a href="https://github.com/MarquiCam"><i class="fa-brands fa-github"></i></a>
     <a href="aurelie.marquie@outlook.com"><i class="fa-solid fa-envelope"></i></a>
