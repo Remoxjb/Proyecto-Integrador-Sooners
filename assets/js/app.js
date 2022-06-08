@@ -137,11 +137,11 @@ const ptf_2 = `
     <div class="content">
         <span></span>
         <div class="img">
-            <img src="https://www.biografiasyvidas.com/biografia/z/fotos/zuckerberg.jpg" alt="">
+            <img src="assets/img/rightslefie.jpg" alt="">
         </div>
         <h4>Alex Tovar</h4>
         <h6>Full Stack Developer</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae accusamus deserunt ducimus repellendus odio similique asperiores,</p>
+        <p>Soy muy enfocado a mi trabajo, soy muy adaptable, siempre estoy dispuesto a ayudar, no tengo problemas admitiendo algo que no conozco o pidiendo ayuda para resolver algún conflicto y me considero muy bueno para acercarme a las personas, también soy muy autodidacta y requiero mínima supervisión, mi empleador puede esperar de mi un empleado ideal.</p>
     </div>
     <div class="links">
         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
