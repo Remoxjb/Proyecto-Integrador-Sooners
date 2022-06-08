@@ -298,3 +298,67 @@ body {
 .formulario-tarjeta .btn-enviar:hover {
     background: #1850b1;
 }
+
+/* !Navbar */
+
+.contenedor-navbar-collapse {
+    width: 100%;
+    padding-right: 0;
+}
+
+.contenedor-navbar-collapse .row {
+    width: 100%;
+}
+
+.menu-centrar {
+    justify-content: center;
+}
+
+.navbar-tienda {
+    padding: 0;
+    background: #47358980;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #33217298;
+}
+
+.navbar-tienda .nav-item .nav-link:hover {
+    cursor: pointer;
+    color: rgb(183, 102, 255);
+}
+
+.icono-navbar {
+    justify-content: center;
+}
+
+.navbar-nav {
+    justify-content: center;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #6d008f;
+}
+
+.navbar-brand {
+    cursor: pointer;
+    text-shadow: 0 0 10px;
+}
+
+.navbar-brand:hover {
+    font-size: 1.3rem;
+    transition: all 0.5s;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    float: right;
+}
+
+.navbar-collapse {
+    text-align: left;
+}
