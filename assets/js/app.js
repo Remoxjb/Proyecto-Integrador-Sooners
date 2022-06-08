@@ -141,7 +141,7 @@ const ptf_2 = `
         </div>
         <h4>Alex Tovar</h4>
         <h6>Full Stack Developer</h6>
-        <p>Soy muy enfocado a mi trabajo, soy muy adaptable, siempre estoy dispuesto a ayudar,también soy muy autodidacta y siempre estoy aprendiendo algo nuevo.</p>
+        <p>Soy muy enfocado a mi trabajo, soy muy adaptable, siempre estoy dispuesto a ayudar y siempre estoy aprendiendo algo nuevo.</p>
     </div>
     <div class="links">
         <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
