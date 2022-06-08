@@ -202,13 +202,15 @@
             <div class="container">
                 <h2 class="titulo text-white" id="contacto">Contacto</h2>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label text-white">Nombre</label>
-                    <input type="text" class="form-control" id="Nombre" placeholder="Nombre" name="name">
+                    <label for="formGroupExampleInput" class="form-label text-white">Nombre<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="Nombre" placeholder="Nombre Completo    " name="nombre">
                 </div>
+                <p class="msj-error text-light" id="errorNombre"></p>
                 <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label text-white">Correo</label>
-                    <input type="email" name="_replyto" class="form-control" id="email" placeholder="@email.com">
+                    <label for="formGroupExampleInput2" class="form-label text-white">Correo<span style="color: red">*</span></label>
+                    <input type="email" name="correo" class="form-control" id="email" placeholder="@email.com">
                 </div>
+                <p class="msj-error text-light" id="errorCorreo"></p>
                 <div class="form-floating pb-2">
                     <textarea class="form-control " placeholder="Contácteme" id="floatingTextarea" name="message"></textarea>
                     <label for="floatingTextarea">Contáctanos</label>
