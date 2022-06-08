@@ -117,17 +117,17 @@ const ptf_2 = `
     <div class="content">
         <span></span>
         <div class="img">
-            <img src="https://www.biografiasyvidas.com/biografia/z/fotos/zuckerberg.jpg" alt="">
+            <img src="assets/img/FotoDan.png" alt="">
         </div>
         <h4>Daniel Perez</h4>
         <h6>Full Stack Developer</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae accusamus deserunt ducimus repellendus odio similique asperiores,</p>
+        <p>Soy Ing. En Comunicaciones y Electrónica y programador como Java Full Stack. Me considero una persona emprendedora, motivada y proactiva.</p>
     </div>
     <div class="links">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/danielprzgmz/"><i class="fa-brands fa-linkedin-in"></i></a>
         
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/DansPrz"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto: danielprz.098@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
   </div>
