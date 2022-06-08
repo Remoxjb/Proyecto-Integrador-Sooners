@@ -97,17 +97,17 @@ const ptf_2 = `
     <div class="content">
         <span></span>
         <div class="img">
-            <img src="https://www.biografiasyvidas.com/biografia/z/fotos/zuckerberg.jpg" alt="">
+            <img src="assets/img/yoEdduF.jpg" alt="">
         </div>
-        <h4>Eduardo Farfan</h4>
+        <h4>Eduardo Farfán</h4>
         <h6>Full Stack Developer</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae accusamus deserunt ducimus repellendus odio similique asperiores,</p>
+        <p>Estudiante en la carrera de Física, enfocado en la formación técnica dentro del campo de la tecnología y el desarrollo web profesional</p>
     </div>
     <div class="links">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/in/eduardo-farfan-coronado22"><i class="fa-brands fa-linkedin-in"></i></a>
         
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/MrEddyFar65"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto: farfan58.edu@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
   </div>
