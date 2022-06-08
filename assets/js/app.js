@@ -77,17 +77,17 @@ const ptf_2 = `
     <div class="content">
         <span></span>
         <div class="img">
-            <img src="https://www.biografiasyvidas.com/biografia/z/fotos/zuckerberg.jpg" alt="">
+            <img src="assets/img/fotoMarco.jpg" alt="">
         </div>
         <h4>Marco Aurelio</h4>
         <h6>Full Stack Developer</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quae accusamus deserunt ducimus repellendus odio similique asperiores,</p>
+        <p>Soy estudiante de Ingeniería Eléctrica, el diseño es un factor fundamental en cualquier sector, si quieres que tu producto sea tendencia necesitas un buen diseño.</p>
     </div>
     <div class="links">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="www.linkedin.com/in/marco-aurelio-campos-alvarez"></i></a>
         
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="#"><i class="https://github.com/MarquiCam"></i></a>
+        <a href="#"><i class="aurelie.marquie@outlook.com"></i></a>
     </div>
 
   </div>
