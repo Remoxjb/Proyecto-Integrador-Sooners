@@ -17,7 +17,6 @@ body {
 .header-section p {
     position: absolute;
     top: 25px;
-    right: -1px;
     background-color: white;
     padding: 1px 6px;
     border-radius: 50%;
@@ -214,15 +213,21 @@ p.close-btn {
 
 .action .profile {
     position: relative;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    overflow: hidden;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-right: 10px;
+}
+
+.profile i {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.profile i:hover {
+    color: #cf8eee;
+    text-shadow: 0 0 5px;
 }
 
 .action .profile img {
