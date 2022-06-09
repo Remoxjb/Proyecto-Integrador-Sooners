@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/formularioSubirArchivo.css">
     <link rel="stylesheet" href="assets/css/subirArchivos.css">
     <link rel="stylesheet" href="assets/css/seccion_ayuda.css">
+    <script async src="https://imgbb.com/upload.js"></script>
 
 </head>
 
@@ -45,7 +46,7 @@
 
 
 
-                    <label for="Orientación" class="text-label">Orientación:<span style="color: red">*</span></label>
+                    <label for="Orientación" class="text-label">Categoría:<span style="color: red">*</span></label>
 
                     <input type="text" id="Orientación" name="orientacion" placeholder="ejm: E-commerce">
                     <p class="msj-error text-light" id="errorOrientacion"></p>
@@ -66,10 +67,10 @@
                 </div>
                 <div class="col">
 
-                    <label for="Cuenta" class="text-label-cuenta">Cuenta:<span style="color: red">*</span></label>
+                    <label for="Cuenta" class="text-label-cuenta">Correo:<span style="color: red">*</span></label>
 
 
-                    <input type="number" name="cuenta" placeholder="Cuenta">
+                    <input type="text" name="cuenta" placeholder="Correo">
                     <p class="msj-error text-light" id="errorCuenta"></p>
                 </div>
                 <div class="col">
@@ -104,24 +105,24 @@
                 <div class="col-12">
 
                 </div>
-                <div class="col">
-                    <button type="button" class="btn-formulario" id="btn-formulario-submit">Agregar</button>
-
-                </div>
             </div>
 
+            <div>
+                <div class="container drop-area ">
+                    <h2>Arrastra y suelta imágenes</h2>
+                    <span>O</span>
+                    <button>Selecciona tus archivos</button>
+                    <input type="file" name="" id="input-file" hidden multiple/>
+                </div>
+                <div id="preview"></div>
+            </div>
+            <div class="col">
+                <button type="button" class="btn-formulario" id="btn-formulario-submit">Agregar</button>
+
+            </div>
         </form>
 
 
-        <div>
-            <div class="container drop-area ">
-                <h2>Arrastra y suelta imágenes</h2>
-                <span>O</span>
-                <button>Selecciona tus archivos</button>
-                <input type="file" name="" id="input-file" hidden multiple/>
-            </div>
-            <div id="preview"></div>
-        </div>
 
     </div>
 

@@ -5,6 +5,7 @@
     font-family: 'Courier New', Courier, monospace;
 } */
 
+
 /* body{
     display: flex;
     align-items: center;
@@ -13,7 +14,7 @@
     background: linear-gradient(#322172, white);
 } */
 
-.drop-area{
+.drop-area {
     margin: 0 auto;
     border: 5px dashed rgb(255, 255, 255);
     height: 40vh;
@@ -25,55 +26,56 @@
     flex-direction: column;
 }
 
-.drop-area.active{
+.drop-area.active {
     background-color: #b8d4fe;
     color: black;
     border: 2px dashed #618ac9;
 }
 
-.drop-area h2{
+.drop-area h2 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #000;
 }
 
- .drop-area span{
-     font-size: 25px;
-     color: #000;
- }
+.drop-area span {
+    font-size: 25px;
+    color: #000;
+}
 
- .drop-area button{
-     padding: 10px 25px;
-     font-size: 20px;
-     border: 0;
-     outline: none;
-     background-color: #947de6;
-     color: white;
-     border-radius: 5px;
-     cursor: pointer;
-     margin: 10px;
- }
+.drop-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    background-color: #947de6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+}
 
- .file-container{
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     padding: 10px;
-     border: solid 1px #ddd;
- }
+.file-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px #ddd;
+}
 
- #preview{
-     margin-top: 10px;
- }
+#preview {
+    color: #ddd;
+    margin-top: 10px;
+}
 
-.status-text{
+.status-text {
     padding: 0 10px;
 }
 
-.success{
+.success {
     color: #52ad5a;
 }
 
-.failure{
+.failure {
     color: #ff0000;
 }
