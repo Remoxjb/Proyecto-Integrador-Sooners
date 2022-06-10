@@ -49,7 +49,7 @@ function readTheContent(product) {
 
     const infoProduct = {
         image: product.querySelector('div img').src,
-        price: product.querySelector('div i').textContent,
+        price: product.querySelector('div button').textContent,
         id: product.querySelector('q').getAttribute('data-id'),
         amount: 1
     }
