@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/formularioSubirArchivo.css">
     <link rel="stylesheet" href="assets/css/subirArchivos.css">
     <link rel="stylesheet" href="assets/css/seccion_ayuda.css">
-    <script async src="https://imgbb.com/upload.js"></script>
+
 
 </head>
 
@@ -107,20 +107,21 @@
                 </div>
             </div>
 
-            <div>
-                <div class="container drop-area ">
-                    <h2>Arrastra y suelta imágenes</h2>
-                    <span>O</span>
-                    <button>Selecciona tus archivos</button>
-                    <input type="file" name="" id="input-file" hidden multiple/>
-                </div>
-                <div id="preview"></div>
+
+            <div class="drag-area container">
+                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <header>Arrastra y suelta imágenes</header>
+                <span>o</span>
+                <button>Selecciona tus archivos</button>
+                <input type="file" hidden>
             </div>
+
             <div class="col">
                 <button type="button" class="btn-formulario" id="btn-formulario-submit">Agregar</button>
 
             </div>
         </form>
+
 
 
 

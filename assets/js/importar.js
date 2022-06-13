@@ -1,101 +1,111 @@
-const dropArea = document.querySelector(".drop-area");
-const dragText = dropArea.querySelector("h2");
-const button = dropArea.querySelector("button");
-const input = dropArea.querySelector("#input-file");
-let files;
+//selecting all required elements
+const
+    dropArea = document.querySelector(".drag-area"),
+    dragText = dropArea.querySelector("header"),
+    button = dropArea.querySelector("button"),
+    input = dropArea.querySelector("input");
 
-button.addEventListener("click", (e) => {
-    input.click();
 
-});
+let file; //this is a global variable and we'll use it inside multiple functions
+
+button.onclick = () => {
+    input.click(); //if user click on the button then the input also clicked
+}
 
 input.addEventListener("change", (e) => {
-    files = this.files;
+    //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+    file = input.files[0];
     dropArea.classList.add("active");
-    showFiles(files);
-    dropArea.classList.remove("active");
+
+    uploadFile(file);
+
+
+    showFile(); //calling function
+
 });
 
+
+//If user Drag File Over DropArea
 dropArea.addEventListener("dragover", (e) => {
-    e.preventDefault();
+    e.preventDefault(); //preventing from default behaviour
     dropArea.classList.add("active");
-    dragText.textContent = "Suelta para subir los archivos";
+    dragText.textContent = "Suelta para cargar archivo";
 });
 
-
-dropArea.addEventListener("dragleave", (e) => {
-    e.preventDefault();
+//If user leave dragged File from DropArea
+dropArea.addEventListener("dragleave", () => {
     dropArea.classList.remove("active");
-    dragText.textContent = "Arrastra y suelta imágenes";
+    dragText.textContent = "Arrastrar y suelta para cargar archivo";
 });
 
-
+//If user drop File on DropArea
 dropArea.addEventListener("drop", (e) => {
-    e.preventDefault();
-    files = e.dataTransfer.files;
-    showFiles(files);
-    dropArea.classList.remove("active");
-    dragText.textContent = "Arrastra y suelta imágenes";
+    e.preventDefault(); //preventing from default behaviour
+    //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+    file = e.dataTransfer.files[0];
+
+
+    showFile(); //calling function
+
+
 });
 
-function showFiles(files) {
-    if (files.length === undefined) {
-        processFile(files);
-    } else {
-        for (const file of files) {
-            processFile(file);
+function showFile() {
+    let fileType = file.type; //getting selected file type
+    let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+    if (validExtensions.includes(fileType)) { //if user selected file is an image file
+        let fileReader = new FileReader(); //creating new FileReader object
+        fileReader.onload = () => {
+            let fileURL = fileReader.result; //passing user file source in fileURL variable
+            // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
+            let imgTag = `<img src="${fileURL}" alt="image">`; //creating an img tag and passing user selected file source inside src attribute
+            dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
         }
-    }
-}
-
-function processFile(file) {
-    const docType = file.type;
-    const validExtensions = ['image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp'];
-    if (validExtensions.includes(docType)) {
-        const fileReader = new FileReader();
-        const id = `file-${Math.random().toString(32).substring(7)}`;
-
-        fileReader.addEventListener('load', (e) => {
-            const fileUrl = fileReader.result;
-            const image = `
-            <div id = "${id}" class="file-container">
-            <img src = "${fileUrl}" alt = "${file.name}" width="50px">
-            <div class = "status">
-            <span>${file.name}</span>
-            <span class = "status-text">
-                Loading...
-                </span>
-                </div>
-                </div>
-                `;
-            document.querySelector('#preview').innerHTML += image;
-        });
         fileReader.readAsDataURL(file);
-        //uploadFile(file);
+        uploadFile(file);
+
     } else {
-        alert("No es un archivo válido")
+        alert("Tipo de archivo no valido");
+        dropArea.classList.remove("active");
+        dragText.textContent = "Suelta para cargar otra imagen";
     }
 }
 
 
-/* function uploadFile(file) {
-    const formData = newFormData();
-    formData.append("file", file);
+async function uploadFile(file) {
 
+    const formdata = new FormData()
+        /* console.log(formdata);
+        console.log(file); */
+    formdata.append("image", file)
     try {
-        const response = await fetch('https://api.imgbb.com/1/upload', {
-            method: "POST",
-            body: formData,
-        });
-        const responseText = await response.text();
-        console.log(responseText);
 
-        document.querySelector(`#${id} .status-text`).innerHTML = `<span class = "success">Archivo Subido correctamente...</span>`;
+        fetch("https://api.imgur.com/3/image/", {
+            method: "post",
+            headers: {
+                Authorization: "Client-ID eae2e5e4b1fbe70"
+            },
+            body: formdata
+        }).then(data => data.json()).then(data => {
+            /*  console.log(data); */
+            link = data.data.link
+                /*  console.log(link); */
+
+        })
     } catch (error) {
-        document.querySelector(`#${id} .status-text`).innerHTML = `<span class = "failure">El archivo no se subió correctamente...</span>`;
+        console.error(error);
     }
+
+
 }
- */
+
+
+
+
+
+
+
+
 const expresiones = {
     nombreD: /^[a-zA-ZÀ-ÿ\s]{1,20}$/,
     orientacion: /^[a-zA-ZÀ-ÿ\s-]{1,15}$/,
@@ -193,6 +203,7 @@ formulario.addEventListener("submit", (e) => {
             new FormData(e.target)
         )
         console.log(datos);
+
         formulario.reset()
     }
 })
