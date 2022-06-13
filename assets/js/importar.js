@@ -86,9 +86,11 @@ async function uploadFile(file) {
         }).then(data => data.json()).then(data => {
             /*  console.log(data); */
             link = data.data.link
-                /*  console.log(link); */
+            console.log(link);
+
 
         })
+
     } catch (error) {
         console.error(error);
     }

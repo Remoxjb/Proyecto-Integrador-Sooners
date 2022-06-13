@@ -24,6 +24,7 @@ $btn_submitForm.addEventListener("click", (e) => {
         descripcion: $iputs[8].value,
     }
 
+
     console.log(datosDelFormulario);
 
     $datosFormularios.push(datosDelFormulario)
