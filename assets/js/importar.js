@@ -1,4 +1,3 @@
-//selecting all required elements
 const
     dropArea = document.querySelector(".drag-area"),
     dragText = dropArea.querySelector("header"),
@@ -46,7 +45,6 @@ dropArea.addEventListener("drop", (e) => {
 
     showFile();
 
-
 });
 
 function showFile() {
@@ -56,7 +54,7 @@ function showFile() {
         let fileReader = new FileReader();
         fileReader.onload = () => {
             let fileURL = fileReader.result;
-            D IT
+
             let imgTag = `<img src="${fileURL}" alt="image">`;
             dropArea.innerHTML = imgTag;
         }
