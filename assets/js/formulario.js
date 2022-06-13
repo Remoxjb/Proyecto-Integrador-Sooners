@@ -7,7 +7,7 @@ $btn_submitForm.addEventListener("click", (e) => {
 
 
     e.preventDefault();
-    console.log("aoe");
+
     const $formulario = document.querySelectorAll("#formularioArchivo");
     const $iputs = $formulario[0];
 
