@@ -11,16 +11,17 @@ let countProduct = 0;
 
 //functions
 loadEventListenrs();
-function loadEventListenrs(){
+
+function loadEventListenrs() {
     allContainerCart.addEventListener('click', addProduct);
 
     containerBuyCart.addEventListener('click', deleteProduct);
 }
 
-function addProduct(e){
+function addProduct(e) {
     e.preventDefault();
     if (e.target.classList.contains('btn-add-cart')) {
-        const selectProduct = e.target.parentElement; 
+        const selectProduct = e.target.parentElement;
         readTheContent(selectProduct);
     }
 }
@@ -32,18 +33,18 @@ function deleteProduct(e) {
         buyThings.forEach(value => {
             if (value.id == deleteId) {
                 let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
-                totalCard =  totalCard - priceReduce;
+                totalCard = totalCard - priceReduce;
                 totalCard = totalCard.toFixed(2);
             }
         });
         buyThings = buyThings.filter(product => product.id !== deleteId);
-        
+
         countProduct--;
     }
     loadHtml();
 }
 
-function readTheContent(product){
+function readTheContent(product) {
     const infoProduct = {
         image: product.querySelector('div img').src,
         title: product.querySelector('.title').textContent,
@@ -69,15 +70,22 @@ function readTheContent(product){
     } else {
         buyThings = [...buyThings, infoProduct]
         countProduct++;
+
     }
+
+
+
     loadHtml();
-    //console.log(infoProduct);
+    localStorage.setItem(carrito, infoProduct);
+    let carritoLocal = localStorage.getItem(carrito);
+    console.log(carritoLocal);
+
 }
 
-function loadHtml(){
+function loadHtml() {
     clearHtml();
     buyThings.forEach(product => {
-        const {image, title, price, amount, id} = product;
+        const { image, title, price, amount, id } = product;
         const row = document.createElement('div');
         row.classList.add('item');
         row.innerHTML = `
@@ -97,6 +105,7 @@ function loadHtml(){
         amountProduct.innerHTML = countProduct;
     });
 }
- function clearHtml(){
+
+function clearHtml() {
     containerBuyCart.innerHTML = '';
- }
+}

@@ -6,7 +6,7 @@ let amountProduct = document.querySelector('.count-product');
 let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
-
+const carritoProductos = [];
 // functions
 
 loadEventListeners();
@@ -40,7 +40,9 @@ function deleteProduct(e) {
         buyThings = buyThings.filter(product => product.id !== deleteId);
 
         countProduct--;
+
     }
+
     loadHtml();
 }
 
@@ -74,7 +76,15 @@ function readTheContent(product) {
     }
 
     loadHtml();
-    console.log(infoProduct);
+
+    carritoProductos.push(infoProduct);
+
+    localStorage.setItem("carrito", JSON.stringify(carritoProductos));
+    let carritoLocal = JSON.parse(localStorage.getItem("carrito"));
+    console.log(carritoLocal);
+
+    /* console.log(infoProduct); */
+
 
 }
 
