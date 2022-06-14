@@ -1,3 +1,10 @@
+const $formulario = document.getElementById("formularioArchivo");
+const $btn_submitFormDB = document.getElementById("btn-formulario-submit");
+
+
+
+url_imagenes = [];
+
 const
     dropArea = document.querySelector(".drag-area"),
     dragText = dropArea.querySelector("header"),
@@ -86,7 +93,9 @@ async function uploadFile(file) {
         }).then(data => data.json()).then(data => {
             /*  console.log(data); */
             link = data.data.link
+            url_imagenes.push(link)
             console.log(link);
+            console.log(url_imagenes)
 
 
         })
@@ -97,6 +106,66 @@ async function uploadFile(file) {
 
 
 }
+
+
+
+
+
+console.log($formulario);
+
+$formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let date = new Date();
+    let fecha = String(date.getFullYear() + '-' + String(date.getMonth() + 1).padStart(2, '0') + '-' + date.getDate()).padStart(2, '0');
+
+
+    const datosArchivo = Object.fromEntries(
+        new FormData($formulario)
+    )
+
+    console.log(datosArchivo);
+
+
+    fetch("http://localhost:8080/api/producto", {
+
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                nombre: datosArchivo.nombreDisenio,
+                categoria: datosArchivo.orientacion,
+                costo: datosArchivo.precio,
+                fechaDeCreacion: fecha,
+                formularios: datosArchivo.formularios,
+                secciones: datosArchivo.secciones,
+                stock: true,
+                tienda: false,
+                galeria: false,
+                descripcion: datosArchivo.descripcion,
+                cuenta: datosArchivo.cuenta,
+                url_imagen: url_imagenes[0],
+                id_usuarioCreador: 3
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+
+
+    .catch((error) => {
+        //esto es para que muestre un error dentro de la consola y te diga en especifico
+        console.error(error);
+    })
+});
+
+
+
+
+
+
+
 
 
 
