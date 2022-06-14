@@ -3,7 +3,7 @@ const $btn_submitForm = document.getElementById("btn-formulario-submit");
 console.log($btn_submitForm);
 
 const $datosFormularios = []
-$btn_submitForm.addEventListener("click", (e) => {
+$btn_submitForm.addEventListener("submit", (e) => {
 
 
     e.preventDefault();
