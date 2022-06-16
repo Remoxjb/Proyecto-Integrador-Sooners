@@ -95,7 +95,7 @@ formulario.addEventListener("submit", (e) => {
         const datos = Object.fromEntries(
             new FormData(e.target)
         )
-        console.log(datos);
+        //console.log(datos);
         formulario.reset()
     }
 })
