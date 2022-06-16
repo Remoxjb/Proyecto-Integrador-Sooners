@@ -65,7 +65,9 @@ body {
     visibility: hidden;
 }
 
+
 .pop-warp {
+
     display: flex;
     width: 90%;
     max-width: 950px;
