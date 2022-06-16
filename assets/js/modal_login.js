@@ -1,17 +1,52 @@
+const $pop_up = document.getElementsByClassName("pop-up")[0];
 
-$(document).ready(function (){
-    $('submit1').on('click', function(e){
+const $pop_warp = document.getElementsByClassName("pop-warp")[0];
+
+const $submit1 = document.getElementById("submit1");
+
+const $submit2 = document.getElementById("submit2");
+
+const $close = document.getElementById("cerrar");
+
+
+
+$submit1.addEventListener("click", (e) => {
         e.preventDefault();
-        function showPopUp(){
-            $('.pop-up').addClass('show')
-            $('.pop-wrap').addClass('show')
-        }
-        
-        $("#close").click(function(){
-            $('.pop-up').removeClass('show')
-            $('.pop-wrap').removeClass('show')
-        });
-        
-        setTimeout(showPopUp, 1000); 
+        console.log(e.target);
+
+        $pop_up.classList.add("show");
+        $pop_warp.classList.add("show");
+
+
+
+
+        console.log($pop_up);
+    }),
+
+
+    $close.addEventListener("click", (e) => {
+        console.log(e.target);
+        $pop_up.classList.remove('show')
+        $pop_warp.classList.remove('show')
     })
-})
+
+
+$submit2.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(e.target);
+
+        $pop_up.classList.add("show");
+        $pop_warp.classList.add("show");
+
+
+
+
+        console.log($pop_up);
+    }),
+
+
+    $close.addEventListener("click", (e) => {
+        console.log(e.target);
+        $pop_up.classList.remove('show')
+        $pop_warp.classList.remove('show')
+    })
