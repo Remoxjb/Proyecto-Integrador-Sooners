@@ -11,7 +11,7 @@ const $close = document.getElementById("cerrar");
 
 
 $submit1.addEventListener("click", (e) => {
-        e.preventDefault();
+
         console.log(e.target);
 
         $pop_up.classList.add("show");
