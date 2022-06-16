@@ -96,7 +96,7 @@ formulario.addEventListener("submit", (e) => {
             new FormData(e.target)
         )
         //console.log(datos);
-        formulario.reset()
+        /* formulario.reset() */
     }
 })
 
@@ -174,7 +174,7 @@ formulario.addEventListener("submit", (e) => {
             new FormData(e.target)
         )
         console.log(datos);
-        formulario.reset()
+        /* formulario.reset() */
     }
 })
 /* 

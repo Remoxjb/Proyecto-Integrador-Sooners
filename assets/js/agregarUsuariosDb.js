@@ -10,7 +10,7 @@ $formulario.addEventListener('submit', (e) => {
     console.log(datos);
     $formulario.reset();
 
-    fetch('http://localhost:8080/api/usuariocreador', {
+    fetch('http://localhost:8080/api/usuario', {
 
             method: 'POST',
             headers: {
