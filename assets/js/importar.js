@@ -4,6 +4,7 @@ const $btn_submitFormDB = document.getElementById("btn-formulario-submit");
 
 
 url_imagenes = [];
+let id_creador = 1
 
 const
     dropArea = document.querySelector(".drag-area"),
@@ -123,6 +124,8 @@ $formulario.addEventListener("submit", (e) => {
         new FormData($formulario)
     )
 
+
+
     console.log(datosArchivo);
 
 
@@ -145,7 +148,7 @@ $formulario.addEventListener("submit", (e) => {
                 descripcion: datosArchivo.descripcion,
                 cuenta: datosArchivo.cuenta,
                 url_imagen: url_imagenes[0],
-                id_usuarioCreador: 3
+                usuarioCreador: id_creador
             })
         })
         .then(response => response.json())
