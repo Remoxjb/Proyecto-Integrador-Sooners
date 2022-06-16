@@ -100,7 +100,6 @@ formulario.addEventListener("submit", (e) => {
     }
 })
 
-
 //registro
 inputs.forEach((inp)=>{
     //console.log(inp);
@@ -178,3 +177,15 @@ formulario.addEventListener("submit", (e) => {
         formulario.reset()
     }
 })
+/* 
+function showPopUp(){
+    $('.pop-up').addClass('show')
+    $('.pop-wrap').addClass('show')
+}
+
+$("#close").click(function(){
+    $('.pop-up').removeClass('show')
+    $('.pop-wrap').removeClass('show')
+});
+
+setTimeout(showPopUp, 1000); */
