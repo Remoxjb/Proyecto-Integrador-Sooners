@@ -64,7 +64,7 @@ body{
     visibility: hidden;
 }
 
-.pop-warp{
+.pop-wrap{
     display: flex;
     width: 90%;
     max-width: 950px;
