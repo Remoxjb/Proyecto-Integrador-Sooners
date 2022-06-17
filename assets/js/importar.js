@@ -149,7 +149,6 @@ $formulario.addEventListener("submit", (e) => {
                 descripcion: datosArchivo.descripcion,
                 cuenta: datosArchivo.cuenta,
                 url_imagen: url_imagenes[0],
-
                 usuarioCreador:{
                     id: 1
                 }   
