@@ -12,19 +12,18 @@ $formulario.addEventListener('submit', (e) => {
 
     fetch('http://localhost:8080/api/usuario', {
 
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            nombre: datos.nombre,
-            apellido: datos.apellido,
-            email: datos.email,
-            contrasenia: datos.contrasenia,
-            nombreUsuario: datos.usuario
-        })
-    })
-    then(resp => {
+            method: 'POST',
+            body: JSON.stringify({
+                nombre: datos.nombre,
+                apellido: datos.apellido,
+                email: datos.email,
+                contrasenia: datos.contrasenia,
+                nombreUsuario: datos.usuario
+            }),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then(resp => {
             const token = resp.headers.get('Authorization');
 
             if (token && token.includes('Bearer') && resp.ok) {
@@ -32,13 +31,14 @@ $formulario.addEventListener('submit', (e) => {
                 console.log(token);
                 url = window.location;
                 const path = url.pathname.substring(0, url.pathname.lastIndexOf('/') + 1)
-                location.href = path + 'data.html';
+                location.href = path + 'tienda.html';
             } else {
                 localStorage.removeItem('token');
             }
         })
         .catch((error) => {
-            //esto es para que muestre un error dentro de la consola y te diga en especifico
             console.error(error);
         })
+
+
 });

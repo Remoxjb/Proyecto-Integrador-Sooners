@@ -4,6 +4,7 @@ const $btn_submitFormDB = document.getElementById("btn-formulario-submit");
 
 
 url_imagenes = [];
+let id_creador = 1
 
 const
     dropArea = document.querySelector(".drag-area"),
@@ -94,8 +95,8 @@ async function uploadFile(file) {
             /*  console.log(data); */
             link = data.data.link
             url_imagenes.push(link)
-            console.log(link);
-            console.log(url_imagenes)
+                /* console.log(link);
+                console.log(url_imagenes) */
 
 
         })
@@ -113,8 +114,6 @@ async function uploadFile(file) {
 
 
 
-console.log($formulario);
-
 $formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     let date = new Date();
@@ -126,9 +125,7 @@ $formulario.addEventListener("submit", (e) => {
     )
 
 
-    let id_creador = 1
 
-    console.log(datosArchivo);
     const token = localStorage.getItem('token');
 
     fetch("http://localhost:8080/api/producto", {
@@ -151,17 +148,15 @@ $formulario.addEventListener("submit", (e) => {
                 descripcion: datosArchivo.descripcion,
                 cuenta: datosArchivo.cuenta,
                 url_imagen: url_imagenes[0],
-
-                usuarioCreador:{
+                usuarioCreador: {
                     id: 1
-                }   
-
+                }
 
             })
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
+
         })
 
 

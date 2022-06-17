@@ -12,7 +12,7 @@ const $close = document.getElementById("cerrar");
 
 $submit1.addEventListener("click", (e) => {
 
-        console.log(e.target);
+
 
         $pop_up.classList.add("show");
         $pop_warp.classList.add("show");
@@ -20,12 +20,12 @@ $submit1.addEventListener("click", (e) => {
 
 
 
-        console.log($pop_up);
+
     }),
 
 
     $close.addEventListener("click", (e) => {
-        console.log(e.target);
+
         $pop_up.classList.remove('show')
         $pop_warp.classList.remove('show')
     })
@@ -33,7 +33,7 @@ $submit1.addEventListener("click", (e) => {
 
 $submit2.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log(e.target);
+
 
         $pop_up.classList.add("show");
         $pop_warp.classList.add("show");
@@ -41,12 +41,12 @@ $submit2.addEventListener("click", (e) => {
 
 
 
-        console.log($pop_up);
+
     }),
 
 
     $close.addEventListener("click", (e) => {
-        console.log(e.target);
+
         $pop_up.classList.remove('show')
         $pop_warp.classList.remove('show')
     })
