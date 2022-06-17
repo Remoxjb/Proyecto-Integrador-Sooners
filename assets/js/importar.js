@@ -127,13 +127,14 @@ $formulario.addEventListener("submit", (e) => {
 
 
     console.log(datosArchivo);
-
+    const token = localStorage.getItem('token');
 
     fetch("http://localhost:8080/api/producto", {
 
             method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': token
             },
             body: JSON.stringify({
                 nombre: datosArchivo.nombreDisenio,
@@ -148,7 +149,11 @@ $formulario.addEventListener("submit", (e) => {
                 descripcion: datosArchivo.descripcion,
                 cuenta: datosArchivo.cuenta,
                 url_imagen: url_imagenes[0],
-                usuarioCreador: id_creador
+
+                usuarioCreador:{
+                    id: 1
+                }   
+
             })
         })
         .then(response => response.json())
