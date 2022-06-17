@@ -1,4 +1,3 @@
-carrito = new Tienda()
 const listaCompra = document.querySelector("#lista-compra tbody");
 const carrito = document.getElementById('carrito');
 const procesarCompraBtn = document.getElementById('procesar-compra');
@@ -8,24 +7,113 @@ const correo = document.getElementById('correo');
 cargarEventos();
 
 function cargarEventos() {
-    document.addEventListener('DOMContentLoaded', compra.leerLocalStorageCompra());
+    leerLocalStorageCompra();
 
-    //Eliminar productos del carrito
-    carrito.addEventListener('click', (e) => { compra.eliminarProducto(e) });
 
-    compra.calcularTotal();
+    listaCompra.addEventListener('click', deleteProduct);
+    calucularTotal();
+    procesarCompraBtn.addEventListener("click", procesarCompra)
+}
 
-    //cuando se selecciona procesar Compra
-    procesarCompraBtn.addEventListener('click', procesarCompra);
 
-    carrito.addEventListener('change', (e) => { compra.obtenerEvento(e) });
-    carrito.addEventListener('keyup', (e) => { compra.obtenerEvento(e) });
+function leerLocalStorageCompra() {
+    let productosLS;
+    productosLS = obtenerProductosLocalStorage();
+    productosLS.forEach(function(producto) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                <img src="${producto.image}" width=100>
+            </td>
+            <td>${producto.titulo}</td>
+            <td>${producto.price}</td>
+            <td>
+                <input type="number" class="form-control cantidad" min="1" value=${producto.amount}>
+            </td>
+            <td id='subtotales'>${producto.price * producto.amount}</td>
+            <td>
+                <a href="#" 
+                class="delete-producto fas fa-times-circle" 
+                style="font-size:30px; text-decoration:none";
+                data-toggle="tooltip" data-id="${producto.id}"></a>
+            </td>
+        `;
+        listaCompra.appendChild(row);
+    });
+}
+
+
+function deleteProduct(e) {
+
+    e.preventDefault();
+
+    let producto, productoID;
+    if (e.target.classList.contains('delete-producto')) {
+
+        e.target.parentElement.parentElement.remove();
+
+        producto = e.target.parentElement;
+        productoID = producto.querySelector("a").getAttribute("data-id");
+
+    }
+
+    eliminarProductoLocalStorage(productoID);
+    location.reload();
+}
+
+function eliminarProductoLocalStorage(productoID) {
+    let productosLS
+    productosLS = obtenerProductosLocalStorage();
+    productosLS.forEach(function(productoLS, index) {
+
+        if (productoLS.id === productoID) {
+            productosLS.splice(index, 1);
+        }
+    });
+
+    localStorage.setItem('productos', JSON.stringify(productosLS));
+}
+
+function obtenerProductosLocalStorage() {
+    let productoLS;
+
+    if (localStorage.getItem("productos") === null) {
+        productoLS = []
+    } else {
+        productoLS = JSON.parse(localStorage.getItem("productos"));
+    }
+    return productoLS
+
 
 }
 
-function procesarCompra() {
-    // e.preventDefault();
-    if (compra.obtenerProductosLocalStorage().length === 0) {
+function calucularTotal() {
+    let productoLS;
+    let total = 0,
+        subtotal = 0,
+        igv = 0;
+
+    productoLS = obtenerProductosLocalStorage();
+    for (let i = 0; i < productoLS.length; i++) {
+        let element = Number(productoLS[i].price * productoLS[i].amount);
+        total = total + element;
+    }
+    igv = parseFloat(total * 0.18).toFixed(2);
+    subtotal = parseFloat(total - igv).toFixed(2);
+
+    document.getElementById("subtotal").innerHTML = "$ " + subtotal;
+    document.getElementById("igv").innerHTML = "$ " + igv;
+    document.getElementById("total").innerHTML = "$ " + total;
+
+}
+
+
+
+
+
+function procesarCompra(e) {
+    e.preventDefault();
+    if (obtenerProductosLocalStorage().length === 0) {
         Swal.fire({
             type: 'error',
             title: 'Oops...',
@@ -33,7 +121,7 @@ function procesarCompra() {
             showConfirmButton: false,
             timer: 2000
         }).then(function() {
-            window.location = "index.html";
+            window.location = "tienda.html";
         })
     } else if (cliente.value === '' || correo.value === '') {
         Swal.fire({
@@ -44,6 +132,30 @@ function procesarCompra() {
             timer: 2000
         })
     } else {
+        const cargandoGif = document.querySelector("#cargando");
+        cargandoGif.style.display = 'block';
+        cargandoGif.style.width = '10%';
+
+        const enviado = document.querySelector("img");
+        enviado.src = "assets/img/mail.png";
+        enviado.style.display = "block";
+        enviado.width = "100";
+
+        setTimeout(() => {
+            cargandoGif.style.display = 'none';
+            document.querySelector("#loaders").appendChild(enviado);
+            setTimeout(() => {
+                enviado.remove();
+                const $iframe = document.getElementById("tarjeta");
+                $iframe.width = "80%";
+                $iframe.height = "850";
+                $iframe.src = "indexPago.html"
+                    /* window.open("indexPago.html", "ventana1", "width=800,height=600,scrollbars=NO") */
+
+                /* localStorage.removeItem("productos");
+                location.href = "tienda.html"; */
+            })
+        }, 2000)
 
         //aqui se coloca el user id generado en el emailJS
         emailjs.init('user_CEozz2F39lJJOLF5mJiDA')
@@ -55,24 +167,24 @@ function procesarCompra() {
         textArea.cols = 60;
         textArea.rows = 10;
         textArea.hidden = true;
-        productosLS = compra.obtenerProductosLocalStorage();
+        productosLS = obtenerProductosLocalStorage();
 
         //Send email option 1
-        // productosLS.forEach(function (producto) {
-        //     textArea.innerHTML += `
-        //          Producto : ${producto.titulo} <br>
-        //          Precio : ${producto.precio} <br>
-        //          Cantidad: ${producto.cantidad} <br>
-        //         --------------------------------------------- <br>
-        //         `;
-        // });
+        productosLS.forEach(function(producto) {
+            textArea.innerHTML += `
+                 Producto : ${producto.titulo} <br>
+                 Precio : ${producto.price} <br>
+                  Cantidad: ${producto.amount} <br>
+                 --------------------------------------------- <br>
+                 `;
+        });
         //End option 1
 
         //Send email option 2
-        textArea.innerHTML = generarTabla(productosLS).innerHTML;
+        //textArea.innerHTML = generarTabla(productosLS).innerHTML;
         //End option 2
 
-        carrito.appendChild(textArea);
+        listaCompra.appendChild(textArea);
 
         /* ------------------------- */
 
@@ -135,9 +247,9 @@ function generarTabla(productosLS) {
         const row = document.createElement("tr");
         row.innerHTML += `
                             <td>${producto.titulo}</td>
-                            <td>${producto.precio}</td>
-                            <td>${producto.cantidad}</td>
-                            <td>${producto.precio * producto.cantidad}</td>
+                            <td>${producto.price}</td>
+                            <td>${producto.amount}</td>
+                            <td>${producto.price * producto.amount}</td>
                         `;
         body.appendChild(row);
     });

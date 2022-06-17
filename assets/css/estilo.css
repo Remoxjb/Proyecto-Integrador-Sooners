@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400;1,500&family=Press+Start+2P&family=Radio+Canada:wght@400;600&display=swap');
+body {
+    background-color: #322172;
+    color: antiquewhite;
+    text-shadow: 0 0 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    color: aliceblue !important;
+}
+
 #cargando {
     display: none;
+}
+
+.btn-success,
+.btn-info {
+    background-color: rgb(182, 131, 230);
+    border: none;
+    color: #fff;
+}
+
+.btn-success:hover,
+.btn-info:hover {
+    background-color: #db6bc9;
+    border: none;
+    box-shadow: 0 0px 10px 1px #fff;
 }

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Formulario de Tarjeta de Crédito Dinámico</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Tarjeta de Crédito Dinámico</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/seccion_ayuda.css">
-	<link rel="stylesheet" href="assets/css/estilosPago.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/seccion_ayuda.css">
+    <link rel="stylesheet" href="assets/css/estilosPago.css">
 </head>
+
 <body>
 
-	<!-- !Navbar -->
-    <nav class="navbar navbar-tienda navbar-expand-lg navbar-dark  sticky-top mb-5">
+    <!-- !Navbar -->
+    <!-- <nav class="navbar navbar-tienda navbar-expand-lg navbar-dark  sticky-top mb-5">
         <div class="container-fluid">
             <div class="row w-100">
                 <div class="col-12 d-flex icono-navbar"><a class="navbar-brand" href="index.html">SoonThemes</a>
@@ -29,11 +31,11 @@
                     <div class="collapse navbar-collapse menu-centrar" id="navbarNav">
                         <ul class="navbar-nav w-75">
                             <li class="nav-item">
-                                <!-- Falta poner links para home -->
+                                
                                 <a class="nav-link" href="indexPago.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active aria-current" href="seccionesTienda/nuevos.html">Nuevos</a>
+                                <a class="nav-link aria-current" href="seccionesTienda/nuevos.html">Nuevos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link aria-current" href="seccionesTienda/populares.html">Populares</a>
@@ -60,99 +62,101 @@
         </div>
 
     </nav>
+ -->
+    <div class="contenedor">
 
-	<div class="contenedor">
+        <!-- Tarjeta -->
+        <section class="tarjeta" id="tarjeta">
+            <div class="delantera">
+                <div class="logo-marca" id="logo-marca">
+                    <!-- <img src="img/logos/visa.png" alt=""> -->
+                </div>
+                <img src="assets/img/chip-tarjeta.png" class="chip" alt="">
+                <div class="datos">
+                    <div class="grupo" id="numero">
+                        <p class="label">Número Tarjeta</p>
+                        <p class="numero">#### #### #### ####</p>
+                    </div>
+                    <div class="flexbox">
+                        <div class="grupo" id="nombre">
+                            <p class="label">Nombre Tarjeta</p>
+                            <p class="nombre">@@@@</p>
+                        </div>
 
-		<!-- Tarjeta -->
-		<section class="tarjeta" id="tarjeta">
-			<div class="delantera">
-				<div class="logo-marca" id="logo-marca">
-					<!-- <img src="img/logos/visa.png" alt=""> -->
-				</div>
-				<img src="assets/img/chip-tarjeta.png" class="chip" alt="">
-				<div class="datos">
-					<div class="grupo" id="numero">
-						<p class="label">Número Tarjeta</p>
-						<p class="numero">#### #### #### ####</p>
-					</div>
-					<div class="flexbox">
-						<div class="grupo" id="nombre">
-							<p class="label">Nombre Tarjeta</p>
-							<p class="nombre">@@@@</p>
-						</div>
+                        <div class="grupo" id="expiracion">
+                            <p class="label">Expiracion</p>
+                            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-						<div class="grupo" id="expiracion">
-							<p class="label">Expiracion</p>
-							<p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="trasera">
+                <div class="barra-magnetica"></div>
+                <div class="datos">
+                    <div class="grupo" id="firma">
+                        <p class="label">Firma</p>
+                        <div class="firma">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="grupo" id="ccv">
+                        <p class="label">CCV</p>
+                        <p class="ccv"></p>
+                    </div>
+                </div>
+                <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+                <a href="#" class="link-banco">www.tubanco.com</a>
+            </div>
+        </section>
 
-			<div class="trasera">
-				<div class="barra-magnetica"></div>
-				<div class="datos">
-					<div class="grupo" id="firma">
-						<p class="label">Firma</p>
-						<div class="firma"><p></p></div>
-					</div>
-					<div class="grupo" id="ccv">
-						<p class="label">CCV</p>
-						<p class="ccv"></p>
-					</div>
-				</div>
-				<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
-				<a href="#" class="link-banco">www.tubanco.com</a>
-			</div>
-		</section>
-
-		<!-- Contenedor Boton Abrir Formulario -->
-		<div class="contenedor-btn">
-			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+        <!-- Contenedor Boton Abrir Formulario -->
+        <div class="contenedor-btn">
+            <button class="btn-abrir-formulario" id="btn-abrir-formulario">
 				<i class="fas fa-plus"></i>
 			</button>
-		</div>
+        </div>
 
-		<!-- Formulario -->
-		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-			<div class="grupo">
-				<label for="inputNumero">Número Tarjeta</label>
-				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
-			</div>
-			<div class="grupo">
-				<label for="inputNombre">Nombre</label>
-				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
-			</div>
-			<div class="flexbox">
-				<div class="grupo expira">
-					<label for="selectMes">Expiracion</label>
-					<div class="flexbox">
-						<div class="grupo-select">
-							<select name="mes" id="selectMes">
+        <!-- Formulario -->
+        <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+            <div class="grupo">
+                <label for="inputNumero">Número Tarjeta</label>
+                <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+            </div>
+            <div class="grupo">
+                <label for="inputNombre">Nombre</label>
+                <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+            </div>
+            <div class="flexbox">
+                <div class="grupo expira">
+                    <label for="selectMes">Expiracion</label>
+                    <div class="flexbox">
+                        <div class="grupo-select">
+                            <select name="mes" id="selectMes">
 								<option disabled selected>Mes</option>
 							</select>
-							<i class="fas fa-angle-down"></i>
-						</div>
-						<div class="grupo-select">
-							<select name="year" id="selectYear">
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="grupo-select">
+                            <select name="year" id="selectYear">
 								<option disabled selected>Año</option>
 							</select>
-							<i class="fas fa-angle-down"></i>
-						</div>
-					</div>
-				</div>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="grupo ccv">
-					<label for="inputCCV">CCV</label>
-					<input type="text" id="inputCCV" maxlength="3">
-				</div>
-			</div>
-			<button type="submit" class="btn-enviar">Enviar</button>
-		</form>
-	</div>
-	
-	<!--Footer  -->
-	<footer class="container-3">
+                <div class="grupo ccv">
+                    <label for="inputCCV">CCV</label>
+                    <input type="text" id="inputCCV" maxlength="3">
+                </div>
+            </div>
+            <button class="btn-enviar">Enviar</button>
+        </form>
+    </div>
+
+    <!--Footer  -->
+    <!--  <footer class="container-3">
         <div class="row row-cols-1 row-cols-md-3 footer p-0">
             <div class="col p-0">
                 <p class="text-center">Todos los derechos reservados, equipo Sooners</p>
@@ -161,7 +165,7 @@
 
                 <div class="row g-0 row-iconos">
                     <div class="col-12 text-center mb-3 text-footer-titulo">SoonThemes</div>
-                    <!-- Falta hover para links -->
+                    
                     <div class="col text-center"><a href=""><i class="fa-brands fa-linkedin-in"></i></a></div>
                     <div class="col text-center"><a href=""><i class="fa-brands fa-github"></i></a></div>
                     <div class="col text-center"><a href=""><i class="fa-brands fa-pinterest"></i></a></div>
@@ -175,14 +179,16 @@
                 <p class="text-center">Generetion México 2022</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	 <!-- Boostrap js -->
-	 <script src="assets/js/bootstrap.js"></script>
-	 <!-- type -->
-	 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-	<script src="assets/js/mainPago.js"></script>
-	<script src="https://kit.fontawesome.com/97b2540957.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- Boostrap js -->
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- type -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="assets/js/mainPago.js"></script>
+    <script src="https://kit.fontawesome.com/97b2540957.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
