@@ -26,98 +26,121 @@ function addProduct(e) {
 }
 
 function deleteProduct(e) {
-
+    e.preventDefault();
+    let producto, productoID;
     if (e.target.classList.contains('delete-product')) {
-        const deleteId = e.target.getAttribute('data-id');
-
-        buyThings.forEach(value => {
-            if (value.id == deleteId) {
-                let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
-                totalCard = totalCard - priceReduce;
-                totalCard = totalCard.toFixed(2);
-            }
-        });
-        buyThings = buyThings.filter(product => product.id !== deleteId);
-
-        countProduct--;
+        e.target.parentElement.remove();
+        producto = e.target.parentElement;
+        productoID = producto.querySelector("span").getAttribute("data-id");
 
     }
 
-    loadHtml();
+    eliminarProductoLocalStorage(productoID);
 }
 
 
-function readTheContent(product) {
+function readTheContent(producto) {
 
-    const infoProduct = {
-        image: product.querySelector('div img').src,
-        price: product.querySelector('div button').textContent,
-        id: product.querySelector('q').getAttribute('data-id'),
+    const infoProducto = {
+        image: producto.querySelector('div img').src,
+        price: producto.querySelector('div button').textContent,
+        id: producto.querySelector('q').getAttribute('data-id'),
         amount: 1
     }
 
-    totalCard = parseFloat(totalCard) + parseFloat(infoProduct.price);
-    totalCard = totalCard.toFixed(2);
+    let productosLS;
+    productosLS = obtenerProductosLocalStorage();
+    productosLS.forEach(function(productoLS) {
+        if (productoLS.id === infoProducto.id) {
+            productosLS = productoLS.id;
+        }
+    })
+    if (productosLS === infoProducto.id) {
+        Swal.fire({
+            type: "info",
+            title: "opps..",
+            text: "El producto ya esta agregado",
+            showConfirmButton: false,
+            timer: 1000
 
-    const exist = buyThings.some(product => product.id === infoProduct.id);
-    if (exist) {
-        const pro = buyThings.map(product => {
-            if (product.id === infoProduct.id) {
-                product.amount++;
-                return product;
-            } else {
-                return product
-            }
-        });
-        buyThings = [...pro];
+        })
     } else {
-        buyThings = [...buyThings, infoProduct]
-        countProduct++;
+        loadHtml(infoProducto);
     }
-
-    loadHtml();
-
-    carritoProductos.push(infoProduct);
-
-    localStorage.setItem("carrito", JSON.stringify(carritoProductos));
-    let carritoLocal = JSON.parse(localStorage.getItem("carrito"));
-    console.log(carritoLocal);
-
-    /* console.log(infoProduct); */
-
 
 }
 
 
 
 
-function loadHtml() {
+function loadHtml(producto) {
 
-    clearHtml();
-    buyThings.forEach(product => {
-        const { image, price, amount, id } = product;
+    const row = document.createElement('div');
+    row.classList.add('item');
+    row.innerHTML = `
+            <img src="${producto.image}" alt="">
+            <div class="item-content">
+                <h5 class="cart-price">${producto.price}$</h5>
+                <h6>Amount: ${producto.amount}</h6>
+            </div>
+            <span class="delete-product" data-id="${producto.id}">X</span>
+        `;
+
+    containerBuyCart.appendChild(row);
+    guardarProductosLocalStorage(producto)
+
+
+};
+
+function guardarProductosLocalStorage(producto) {
+    let productos;
+    productos = obtenerProductosLocalStorage();
+    productos.push(producto);
+    localStorage.setItem('productos', JSON.stringify(productos));
+
+}
+
+function obtenerProductosLocalStorage() {
+    let productoLS;
+
+    if (localStorage.getItem("productos") === null) {
+        productoLS = []
+    } else {
+        productoLS = JSON.parse(localStorage.getItem("productos"));
+    }
+    return productoLS
+
+}
+
+
+function eliminarProductoLocalStorage(productoID) {
+    let productosLS
+    productosLS = obtenerProductosLocalStorage();
+    productosLS.forEach(function(productoLS, index) {
+        console.log(productoLS.id);
+        if (productoLS.id === productoID) {
+            productosLS.splice(index, 1);
+        }
+    });
+
+    localStorage.setItem('productos', JSON.stringify(productosLS));
+}
+leerLocalStorage()
+
+function leerLocalStorage() {
+    let productosLS;
+    productosLS = obtenerProductosLocalStorage();
+    productosLS.forEach(function(producto) {
         const row = document.createElement('div');
         row.classList.add('item');
         row.innerHTML = `
-            <img src="${image}" alt="">
+            <img src="${producto.image}" alt="">
             <div class="item-content">
-                <h5 class="cart-price">${price}$</h5>
-                <h6>Amount: ${amount}</h6>
+                <h5 class="cart-price">${producto.price}$</h5>
+                <h6>Amount: ${producto.amount}</h6>
             </div>
-            <span class="delete-product" data-id="${id}">X</span>
+            <span class="delete-product" data-id="${producto.id}">X</span>
         `;
-
         containerBuyCart.appendChild(row);
-        priceTotal.innerHTML = totalCard;
-        amountProduct.innerHTML = countProduct;
-
     });
-}
-
-function clearHtml() {
-
-    containerBuyCart.innerHTML = '';
-    priceTotal.innerHTML = 0;
-    amountProduct.innerHTML = countProduct;
-
 }
