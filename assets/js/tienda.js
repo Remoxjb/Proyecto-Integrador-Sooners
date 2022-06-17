@@ -117,7 +117,7 @@ function eliminarProductoLocalStorage(productoID) {
     let productosLS
     productosLS = obtenerProductosLocalStorage();
     productosLS.forEach(function(productoLS, index) {
-        console.log(productoLS.id);
+
         if (productoLS.id === productoID) {
             productosLS.splice(index, 1);
         }

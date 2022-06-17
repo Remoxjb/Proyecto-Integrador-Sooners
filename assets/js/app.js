@@ -6,7 +6,7 @@ const $nosotros = document.querySelectorAll(".nosotros");
 
 const $contanedorLista = document.getElementById("contenedor-lista-nosotros");
 
-console.log($contanedorLista);
+
 
 const ptf_1 = `
 <div class="row contenedor-js-app-1" id="contenedor-js-1">
@@ -352,10 +352,7 @@ formulario.addEventListener("click", (e) => {
         const datos = Object.fromEntries(
             new FormData(e.target)
         )
-        console.log(datos);
+
         formulario.reset()
     }
 })
-
-
-let ale = "ale.andrade@gmail.com"
