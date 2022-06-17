@@ -293,8 +293,8 @@ for (let i = 0; i < $linksNosotros.length; i++) {
 
 
 const expresiones = {
-  nombre: /^[a-zA-ZÀ-ÿ\s]{10,40}$/,
-  correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    nombre: /^[a-zA-ZÀ-ÿ\s]{10,40}$/,
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 const formulario = document.querySelector('form');
 //console.log(formulario);
@@ -306,53 +306,56 @@ const nombreError = document.querySelector('#errorNombre');
 const correoError = document.querySelector('#errorCorreo');
 
 const estatusInf = {
-	nombre: false,
-	correo: false,    
+    nombre: false,
+    correo: false,
 }
 
-inputs.forEach((inp)=>{
-  //console.log(inp);
+inputs.forEach((inp) => {
+    //console.log(inp);
 
-  
-  inp.addEventListener("keyup", (e)=>{
-       //console.log(e.target.name);
 
-      switch(e.target.name){
-          
-        case "nombre":
-                if(expresiones.nombre.test(e.target.value)){
+    inp.addEventListener("keyup", (e) => {
+        //console.log(e.target.name);
+
+        switch (e.target.name) {
+
+            case "name":
+                if (expresiones.nombre.test(e.target.value)) {
                     estatusInf.nombre = true
                     nombreError.textContent = ""
-                }
-                else{
+                } else {
                     estatusInf.nombre = false
                     nombreError.textContent = "Nombre no valido"
                 }
-                break  
-        case "correo":
-              if(expresiones.correo.test(e.target.value)){
-                  estatusInf.correo = true
-                  correoError.textContent = ""
-              }
-              else{
-                  estatusInf.correo = false
-                  correoError.textContent = "Email no valido"
-              }
-              break
-      }
-  })
+                break
+            case "email":
+                if (expresiones.correo.test(e.target.value)) {
+                    estatusInf.correo = true
+                    correoError.textContent = ""
+                } else {
+                    estatusInf.correo = false
+                    correoError.textContent = "Email no valido"
+                }
+                break
+        }
+
+    })
+
 })
 
-formulario.addEventListener("submit", (e) => {
-  e.preventDefault();
-  //console.log(formulario);
+formulario.addEventListener("click", (e) => {
 
- if(!Object.values(estatusInf).includes(false)){
-     //console.log("Enviado");
-      const datos = Object.fromEntries(
-          new FormData(e.target)
-      )
-      console.log(datos);
-      formulario.reset()
-  }
+    //console.log(formulario);
+
+    if (!Object.values(estatusInf).includes(false)) {
+        //console.log("Enviado");
+        const datos = Object.fromEntries(
+            new FormData(e.target)
+        )
+        console.log(datos);
+        formulario.reset()
+    }
 })
+
+
+let ale = "ale.andrade@gmail.com"
