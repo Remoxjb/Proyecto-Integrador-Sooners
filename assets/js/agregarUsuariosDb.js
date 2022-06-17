@@ -1,5 +1,5 @@
 const $formulario = document.getElementById('fomr2');
-//console.log($formulario);
+console.log($formulario);
 
 $formulario.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -13,17 +13,30 @@ $formulario.addEventListener('submit', (e) => {
     fetch('http://localhost:8080/api/usuario', {
 
             method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
             body: JSON.stringify({
                 nombre: datos.nombre,
                 apellido: datos.apellido,
                 email: datos.email,
                 contrasenia: datos.contrasenia,
                 nombreUsuario: datos.usuario
-            }),
-            headers: {
-                'Content-type': 'application/json'
+            })
+        })
+        .then(resp => {
+            console.log(resp.ok);
+            if (resp.ok) {
+                Swal.fire('Registro exitoso')
+                setTimeout(() => {
+
+                    location.reload();
+                }, 2000)
+            } else {
+                Swal.fire('Fallo el registro intenta nuevamente')
+
             }
-        }).then(resp => {
+
             const token = resp.headers.get('Authorization');
 
             if (token && token.includes('Bearer') && resp.ok) {
