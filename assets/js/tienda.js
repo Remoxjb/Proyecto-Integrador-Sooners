@@ -134,12 +134,14 @@ function leerLocalStorage() {
         const row = document.createElement('div');
         row.classList.add('item');
         row.innerHTML = `
-            <img src="${producto.image}" alt="">
-            <div class="item-content">
-                <h5 class="cart-price">${producto.price}$</h5>
-                <h6>Amount: ${producto.amount}</h6>
-            </div>
-            <span class="delete-product" data-id="${producto.id}">X</span>
+        <img src="${producto.image}" alt="">
+        <div class="item-content">
+        <h5 class="cart-price">${producto.price}$</h5>
+        <h6>Amount: ${producto.amount}</h6>
+        </div>
+        <span class="delete-product" data-id="${producto.id}">X</span>
+        
+        
         `;
         containerBuyCart.appendChild(row);
     });
